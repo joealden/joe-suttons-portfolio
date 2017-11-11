@@ -1,0 +1,15 @@
+{
+	"name": "joesutton-portfolio",
+	"description": "The portfolio of Joe Sutton",
+	"private": true,
+	"license": "MIT",
+	"scripts": {
+		"develop": "gatsby develop",
+		"build": "gatsby build",
+		"serve": "gatsby serve"
+	},
+	"dependencies": {
+		"gatsby": "^1.9.102",
+		"gatsby-link": "^1.6.22"
+	}
+}
