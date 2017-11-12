@@ -12,8 +12,7 @@ injectGlobal`
 `
 
 const activeLink = {
-	color: 'black',
-	borderBottom: '2px solid black'
+	color: 'black'
 }
 
 export default ({ children }) => (
@@ -69,12 +68,28 @@ const Grid = styled.div`
 
 const Header = styled.header`
 	a {
+		text-transform: uppercase;
 		color: grey;
 		text-decoration: none;
-		text-transform: uppercase;
+		transition: color 0.25s ease-out;
+		display: inline-block;
 
 		&:hover {
-			border-bottom: 2px solid black;
+			color: black;
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			width: 0;
+			height: 2px;
+			background-color: #000;
+			margin-top: 0.1rem;
+			transition: width 0.25s ease-out;
+		}
+
+		&:hover::after {
+			width: 100%;
 		}
 	}
 `
@@ -92,14 +107,30 @@ const Navigation = styled.nav`
 			&:not(last-child) {
 				margin-bottom: 0.4rem;
 			}
+		}
 
-			a {
-				color: grey;
-				text-decoration: none;
+		li a {
+			color: grey;
+			text-decoration: none;
+			transition: color 0.25s ease-out;
+			display: inline-block;
 
-				&:hover {
-					border-bottom: 2px solid black;
-				}
+			&:hover {
+				color: black;
+			}
+
+			&::after {
+				content: '';
+				display: block;
+				width: 0;
+				height: 2px;
+				background-color: #000;
+				margin-top: 0.1rem;
+				transition: width 0.25s ease-out;
+			}
+
+			&:hover::after {
+				width: 100%;
 			}
 		}
 	}
