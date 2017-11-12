@@ -11,7 +11,7 @@
   },
   "scripts": {
     "dev": "nuxt",
-    "generate": "nuxt generate"
+    "gen": "nuxt generate"
   },
   "dependencies": {
     "nuxt": "^1.0.0-rc11"
