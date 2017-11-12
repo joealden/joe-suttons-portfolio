@@ -1,2 +1,2 @@
 # joe-suttons-portfolio
-The portfolio of Joe Sutton.
+The Creative Portfolio of Joe Sutton.
