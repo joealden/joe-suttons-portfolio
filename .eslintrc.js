@@ -7,6 +7,9 @@ module.exports = {
   },
   extends: 'standard',
   plugins: ['html'],
-  rules: {},
-  globals: {}
+  rules: {
+    semi: 0,
+    'no-unneeded-ternary': 0,
+    'space-before-function-paren': 0
+  }
 }
