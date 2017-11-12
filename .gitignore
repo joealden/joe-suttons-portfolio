@@ -1,11 +1,11 @@
-# Logs
-logs
-*.log
-npm-debug.log*
+# dependencies
+node_modules
 
-# Dependency directories
-node_modules/
+# logs
+npm-debug.log
 
-#gatbsy
-.cache/
-public
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
