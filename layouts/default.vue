@@ -2,7 +2,7 @@
   <div id="main-wrapper">
     <div id="grid">
       <header>
-        <nuxt-link to="/" class="animated-link">
+        <nuxt-link to="/" exact class="animated-link">
           Joe Sutton
         </nuxt-link>
       </header>
@@ -92,7 +92,7 @@ nav
   &:hover::after
     width 100%
 
-.router-link-active
+.nuxt-link-active
   color black
   &::after
     content ''
