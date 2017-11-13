@@ -1,48 +1,55 @@
 <template>
-  <div id="grid">
-    <header>
-      <nuxt-link to="/" exact>
-        Joe Sutton
-      </nuxt-link>
-      <h1>Digital and Brand Designer</h1>
-    </header>
-    <nav>
-      <ul>
-        <li>
-          <nuxt-link to="/about" class="animated-link">
-            About
-          </nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/showcase" class="animated-link">
-            Showcase
-          </nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/contact" class="animated-link">
-            Contact
-          </nuxt-link>
-        </li>
-      </ul>
-    </nav>
-    <div id="showcase">
-      <img src="http://via.placeholder.com/700x500">
-      <img src="http://via.placeholder.com/700x1100">
-    </div>
-    <main>
-      <h2>Case Studies</h2>
-      <span>
-        Umoro - Stab Mag - Tuff - Lettering
-      </span>
-    </main>
-    <div id="about">
-      <h2>About</h2>
-      <p>
-        Aenean imperdiet accumsan lorem, vitae laoreet nisi pulvinar vitae. Vivamus facilisis condimentum magna, in malesuada urna
-      </p>
-    </div>
-    <div id="dev">
-      <a href="https://joealden.com">Developed by Joe Alden</a>
+  <div id="wrapper">
+    <div id="grid">
+      <header>
+        <nuxt-link to="/" exact>
+          Joe Sutton
+        </nuxt-link>
+        <h1>Digital and Brand Designer</h1>
+      </header>
+      <nav>
+        <ul>
+          <li>
+            <nuxt-link to="/about" class="animated-link">
+              About
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link to="/showcase" class="animated-link">
+              Showcase
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link to="/contact" class="animated-link">
+              Contact
+            </nuxt-link>
+          </li>
+        </ul>
+      </nav>
+      <div id="showcase">
+        <img src="http://via.placeholder.com/700x500">
+        <img src="http://via.placeholder.com/700x400">
+        <img src="http://via.placeholder.com/700x500">
+        <img src="http://via.placeholder.com/700x600">
+        <img src="http://via.placeholder.com/700x600">
+      </div>
+      <main>
+        <h2>Case Studies</h2>
+        <div>
+          <span>
+            Umoro - Stab Mag - Tuff - Lettering
+          </span>
+        </div>
+      </main>
+      <div id="about">
+        <h2>About</h2>
+        <p>
+          Aenean imperdiet accumsan lorem, vitae laoreet nisi pulvinar vitae. Vivamus facilisis condimentum magna, in malesuada urna
+        </p>
+      </div>
+      <div id="dev">
+        <a href="https://joealden.com">Developed by Joe Alden</a>
+      </div>
     </div>
   </div>
 </template>
@@ -56,10 +63,12 @@
   grid-template-rows auto
   grid-template-areas "showcase header nav" "showcase main main" "showcase about dev"
   grid-column-gap 5rem
-  padding 5rem
+  height 100vh
+  overflow hidden
 
 header
   grid-area header
+  margin-top $main-margin
   a
     text-decoration none
     text-transform uppercase
@@ -77,7 +86,9 @@ header
 
 nav
   grid-area nav
-
+  margin-top $main-margin
+  margin-right $main-margin
+  
   ul
     margin 0
     li
@@ -88,38 +99,63 @@ nav
       
 #showcase
   grid-area showcase
+  margin-left $main-margin
+  margin-top $main-margin
+  overflow-y auto
+
   display flex
   flex-direction column
   img
-    &:not(last-child)
+    &:not(:last-child)
       margin-bottom 5rem
 
 main
   grid-area main
+  align-self end
+  margin-right $main-margin
+
   h2
     font-weight normal
     text-transform uppercase
     letter-spacing: 1px;
     font-size: 12px;
     color $main-grey
-  span
-    font-size 275px
-    font-weight 900
-    line-height 344px
-    color black
-    white-space: nowrap;
+    text-align right
+    
+  div
+    overflow-x auto
+    span
+      font-size 275px
+      font-weight 900
+      color black
+      white-space nowrap
+      margin-left -1rem
+      
 
 #about
   grid-area about
+  margin-bottom $main-margin
+  align-self end
+  width 25rem
+  color #3C3C3C
+  font-size 14px
+  line-height 30px
+
   h2
     font-weight normal
     text-transform uppercase
     letter-spacing: 1px;
     font-size: 12px;
     color $main-grey
+  p
+    margin 0
 
 #dev
   grid-area dev
+  margin-bottom $main-margin
+  margin-right $main-margin
+  align-self end
+
   text-align right
   a
     color #868686

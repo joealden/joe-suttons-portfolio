@@ -1,7 +1,5 @@
 <template>
-  <div id="main-wrapper">
-    <nuxt/>
-  </div>
+  <nuxt/>
 </template>
 
 <style lang="stylus">
@@ -11,8 +9,7 @@
 
 body
   margin 0
-  height 100vh
-  overflow hidden
+  background-color white
 
 .page-enter-active
 .page-leave-active
@@ -22,7 +19,4 @@ body
 .page-leave-active 
   opacity 0
   transform-origin 50% 50%
-
-#main-wrapper
-  background-color white
 </style>
