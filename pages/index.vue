@@ -1,5 +1,5 @@
 <template>
-  <div id="wrapper">
+  <div>
     <div id="grid">
       <header>
         <nuxt-link to="/" exact>

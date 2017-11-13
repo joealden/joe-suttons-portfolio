@@ -1,5 +1,5 @@
 <template>
-  <div id="wrapper">
+  <div id="showcase-wrapper">
     <header>
       <nuxt-link to="/" exact>
         Joe Sutton
@@ -34,7 +34,7 @@
 <style lang="stylus">
 @require '../assets/variables'
 
-#wrapper
+#showcase-wrapper
   padding 5rem
 
 header
