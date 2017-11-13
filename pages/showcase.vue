@@ -31,7 +31,7 @@
   </div>
 </template>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 @require '../assets/variables'
 
 #showcase-wrapper
