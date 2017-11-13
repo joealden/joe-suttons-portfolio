@@ -57,6 +57,13 @@
 <style lang="stylus" scoped>
 @require '../assets/variables'
 
+h2
+  font-weight normal
+  text-transform uppercase
+  letter-spacing: 1px;
+  font-size: 12px;
+  color $main-grey
+
 #grid
   display grid
   grid-template-columns 1fr 1fr 1fr
@@ -110,43 +117,31 @@ nav
       margin-bottom 5rem
 
 main
-  grid-area main
+#about
+#dev
   align-self end
-  margin-right $main-margin
 
+main
+  grid-area main
+  margin-right $main-margin
   h2
-    font-weight normal
-    text-transform uppercase
-    letter-spacing: 1px;
-    font-size: 12px;
-    color $main-grey
     text-align right
-    
   div
     overflow-x auto
     span
-      font-size 275px
+      font-size 20vh
       font-weight 900
       color black
       white-space nowrap
-      margin-left -1rem
-      
+      margin-left -1vh
 
 #about
   grid-area about
   margin-bottom $main-margin
-  align-self end
   width 25rem
   color #3C3C3C
   font-size 14px
   line-height 30px
-
-  h2
-    font-weight normal
-    text-transform uppercase
-    letter-spacing: 1px;
-    font-size: 12px;
-    color $main-grey
   p
     margin 0
 
@@ -154,8 +149,6 @@ main
   grid-area dev
   margin-bottom $main-margin
   margin-right $main-margin
-  align-self end
-
   text-align right
   a
     color #868686
