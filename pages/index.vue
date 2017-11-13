@@ -103,16 +103,17 @@ nav
       list-style none
       a
         padding: 0 0 0.5rem 0;
-      
+
 #showcase
   grid-area showcase
   margin-left $main-margin
-  margin-top $main-margin
+  padding-top $main-margin
   overflow-y auto
 
   display flex
   flex-direction column
   img
+    width 100%
     &:not(:last-child)
       margin-bottom 5rem
 
