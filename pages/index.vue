@@ -26,12 +26,23 @@
           </li>
         </ul>
       </nav>
-      <div id="showcase">
-        <img src="http://via.placeholder.com/700x500">
-        <img src="http://via.placeholder.com/700x400">
-        <img src="http://via.placeholder.com/700x500">
-        <img src="http://via.placeholder.com/700x600">
-        <img src="http://via.placeholder.com/700x600">
+      <div class="floater">
+        <div class="inner slide">
+          <div v-for="time in times" :key="time" class="wrap">
+            <span>
+              <img src="http://via.placeholder.com/700x500">
+            </span>
+            <span>
+              <img src="http://via.placeholder.com/700x500">
+            </span>
+            <span>
+              <img src="http://via.placeholder.com/700x500">
+            </span>
+            <span>
+              <img src="http://via.placeholder.com/700x500">
+            </span>
+          </div>
+        </div>
       </div>
       <main>
         <h2>Case Studies</h2>
@@ -51,11 +62,51 @@
         <a href="https://joealden.com">Developed by Joe Alden</a>
       </div>
     </div>
+    <script src="floater.js"></script>
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      times: [1, 2, 3]
+    }
+  }
+}
+</script>
+
+
 <style lang="stylus" scoped>
 @require '../assets/variables'
+
+.floater
+  overflow hidden
+  grid-area showcase
+  margin-left $main-margin
+  padding-top $main-margin
+
+.floater .inner.slide
+  transform translate(0)
+  animation slide 25s linear infinite
+  transform-style preserve-3d
+  z-index 100
+
+.floater .inner .wrap
+  align-items center
+
+.floater .inner .wrap span
+  display block
+  min-width 70px
+  opacity 0
+
+.floater .inner.slide .wrap span
+  opacity 1
+
+  img
+    width 100%
+    &:not(last-child)
+      margin-bottom 5rem
 
 h2
   font-weight normal
