@@ -30,16 +30,16 @@
         <div class="inner slide">
           <div class="wrap">
             <span>
-              <img src="http://via.placeholder.com/700x500">
+              <img src="https://via.placeholder.com/700x500">
             </span>
             <span>
-              <img src="http://via.placeholder.com/700x500">
+              <img src="https://via.placeholder.com/700x500">
             </span>
             <span>
-              <img src="http://via.placeholder.com/700x500">
+              <img src="https://via.placeholder.com/700x500">
             </span>
             <span>
-              <img src="http://via.placeholder.com/700x500">
+              <img src="https://via.placeholder.com/700x500">
             </span>
           </div>
         </div>

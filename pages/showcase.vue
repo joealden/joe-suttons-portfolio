@@ -13,19 +13,19 @@
     <h1>Showcase</h1>
     <div id="grid">
       <div class="column">
-        <img src="http://via.placeholder.com/700x400">
-        <img src="http://via.placeholder.com/700x600">
-        <img src="http://via.placeholder.com/700x800">
+        <img src="https://via.placeholder.com/700x400">
+        <img src="https://via.placeholder.com/700x600">
+        <img src="https://via.placeholder.com/700x800">
       </div>
       <div class="column">
-        <img src="http://via.placeholder.com/700x700">
-        <img src="http://via.placeholder.com/700x600">
-        <img src="http://via.placeholder.com/700x500">
+        <img src="https://via.placeholder.com/700x700">
+        <img src="https://via.placeholder.com/700x600">
+        <img src="https://via.placeholder.com/700x500">
       </div>
       <div class="column">
-        <img src="http://via.placeholder.com/700x500">
-        <img src="http://via.placeholder.com/700x600">
-        <img src="http://via.placeholder.com/700x700">
+        <img src="https://via.placeholder.com/700x500">
+        <img src="https://via.placeholder.com/700x600">
+        <img src="https://via.placeholder.com/700x700">
       </div>
     </div>
   </div>
