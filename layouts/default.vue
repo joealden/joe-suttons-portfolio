@@ -7,9 +7,12 @@
 <style lang="stylus">
 *
   font-family "aktiv-grotesk"
+  font-size 15px
 
 body
   margin 0
+  height 100vh
+  overflow hidden
 
 .page-enter-active
 .page-leave-active
@@ -22,5 +25,4 @@ body
 
 #main-wrapper
   background-color white
-  height 100vh
 </style>
