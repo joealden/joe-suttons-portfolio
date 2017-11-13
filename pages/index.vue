@@ -26,9 +26,9 @@
           </li>
         </ul>
       </nav>
-      <div class="floater">
+      <div id="showcase">
         <div class="inner slide">
-          <div v-for="time in times" :key="time" class="wrap">
+          <div class="wrap">
             <span>
               <img src="http://via.placeholder.com/700x500">
             </span>
@@ -62,16 +62,50 @@
         <a href="https://joealden.com">Developed by Joe Alden</a>
       </div>
     </div>
-    <script src="floater.js"></script>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      times: [1, 2, 3]
+  // TODO: Fix Animation with different images
+  mounted() {
+    const floater = document.querySelector('#showcase')
+    const wrapper = floater.querySelector('.wrap')
+    const wrapperHeight = wrapper.offsetHeight
+    const inner = floater.querySelector('.inner')
+
+    // Calculate how many times the original element needs to be cloned
+    let amount = 1;
+    const elHeight = wrapperHeight;
+    const remainingHeight = window.Height - elHeight;
+
+    if ((remainingHeight / elHeight) > 0) {
+      amount += Math.ceil(remainingHeight / elHeight);
     }
+
+    for (let i = 0; i < amount; i++) {
+      let clone = wrapper.cloneNode(true);
+      inner.appendChild(clone);
+    }
+
+    // Add keyframe animation to <head>
+    const css = document.createTextNode(
+      `@keyframes slide { 
+        0% {
+          transform:translate(0)
+        } 100% {
+          transform:translate(0, -${wrapperHeight}px)
+        }
+      }`
+    )
+
+    const style = document.createElement('style')
+    style.type = 'text/css'
+    style.appendChild(css)
+    document.head.appendChild(style)
+
+    // Start animating
+    inner.classList.add('slide')
   }
 }
 </script>
@@ -80,40 +114,32 @@ export default {
 <style lang="stylus" scoped>
 @require '../assets/variables'
 
-.floater
-  overflow hidden
-  grid-area showcase
-  margin-left $main-margin
-  padding-top $main-margin
-
-.floater .inner.slide
-  transform translate(0)
-  animation slide 25s linear infinite
-  transform-style preserve-3d
-  z-index 100
-
-.floater .inner .wrap
-  align-items center
-
-.floater .inner .wrap span
-  display block
-  min-width 70px
-  opacity 0
-
-.floater .inner.slide .wrap span
-  opacity 1
-
-  img
-    width 100%
-    &:not(last-child)
-      margin-bottom 5rem
-
 h2
   font-weight normal
   text-transform uppercase
   letter-spacing: 1px;
   font-size: 12px;
   color $main-grey
+
+.animated-link
+  color #868686
+  text-decoration none
+  transition color 0.25s ease-out
+  display inline-block
+  font-size: 14px;
+  
+  &:hover
+    color black
+  &::after
+    content ''
+    display block
+    width 0
+    height 2px
+    background-color #CECECE
+    margin-top 0.1rem
+    transition 0.25s ease-out
+  &:hover::after
+    width 100%
 
 #grid
   display grid
@@ -156,16 +182,28 @@ nav
         padding: 0 0 0.5rem 0;
 
 #showcase
+  overflow hidden
   grid-area showcase
   margin-left $main-margin
   padding-top $main-margin
-  overflow-y auto
 
-  display flex
-  flex-direction column
+  .inner.slide
+    animation slide 25s linear infinite
+    transform-style preserve-3d
+    .wrap span
+      opacity 1
+
+  .inner 
+    .wrap
+      align-items center
+      span
+        display block
+        min-width 70px
+        opacity 0
+
   img
     width 100%
-    &:not(:last-child)
+    &:not(last-child)
       margin-bottom 5rem
 
 main
@@ -208,24 +246,4 @@ main
     transition 0.25s ease-out
     &:hover
       color black
-
-.animated-link
-  color #868686
-  text-decoration none
-  transition color 0.25s ease-out
-  display inline-block
-  font-size: 14px;
-  
-  &:hover
-    color black
-  &::after
-    content ''
-    display block
-    width 0
-    height 2px
-    background-color #CECECE
-    margin-top 0.1rem
-    transition 0.25s ease-out
-  &:hover::after
-    width 100%
 </style>
