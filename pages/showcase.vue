@@ -37,7 +37,6 @@
 
 h1
   font-weight 900
-  font-size 12vw
 
 header
   display flex
@@ -79,6 +78,7 @@ $padding-mobile = 6vw
   padding $padding-mobile $padding-mobile 0 $padding-mobile
 
 h1
+  font-size 16vw
   margin $padding-mobile 0 1rem 0
 
 #grid
@@ -101,6 +101,7 @@ $padding-desktop = 4vw
     padding $padding-desktop $padding-desktop 0 $padding-desktop
 
   h1
+    font-size 12vw
     margin $padding-desktop 0 1rem 0
 
   #grid
