@@ -4,11 +4,11 @@
       <nuxt-link to="/" exact>
         Joe Sutton
       </nuxt-link>
-      <button id="hamburger">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-      </button>
+      <div @click="openMenu" :class="hamburgerClicked ? 'open' : ''" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </header>
     <h1>Showcase</h1>
     <div id="grid">
@@ -31,6 +31,23 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      hamburgerClicked: false
+    }
+  },
+
+  methods: {
+    openMenu() {
+      this.hamburgerClicked = !this.hamburgerClicked
+    }
+  }
+}
+</script>
+
 
 <style lang="stylus" scoped>
 @require '../assets/variables'
@@ -57,14 +74,44 @@ button
   outline none
   cursor pointer
 
+// TODO: hardware accelerate
 #hamburger
-  padding 0
-  .line
-    width 40px
-    height 2px
-    background-color black
+  width 40px
+  height 27px
+  position relative
+  transform rotate(0deg)
+  transition .5s ease-in-out
+  cursor pointer
+  span
     display block
-    margin 0 0 8px auto
+    position absolute
+    height 3px
+    width 100%
+    background-color black
+    opacity 1
+    left 0
+    transform rotate(0deg)
+    transition .25s ease-in-out
+    transform-origin left center
+    &:nth-child(1)
+      top 0px
+    &:nth-child(2)
+      top 12px
+    &:nth-child(3)
+      top 24px
+
+#hamburger.open span
+  &:nth-child(1)
+    transform rotate(45deg)
+    top 0px
+    left 10px
+  &:nth-child(2)
+    width 0%
+    opacity 0
+  &:nth-child(3)
+    transform rotate(-45deg)
+    top 29px
+    left 10px
 
 #grid img
   display inline-block
