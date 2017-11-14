@@ -12,22 +12,22 @@
     </header>
     <h1>Showcase</h1>
     <div id="grid">
-      <span><img src="https://via.placeholder.com/700x400"></span>
-      <span><img src="https://via.placeholder.com/700x600"></span>
-      <span><img src="https://via.placeholder.com/700x800"></span>
-      <span><img src="https://via.placeholder.com/700x700"></span>
-      <span><img src="https://via.placeholder.com/700x600"></span>
-      <span><img src="https://via.placeholder.com/700x500"></span>
-      <span><img src="https://via.placeholder.com/700x500"></span>
-      <span><img src="https://via.placeholder.com/700x600"></span>
-      <span><img src="https://via.placeholder.com/700x700"></span>
-      <span><img src="https://via.placeholder.com/700x700"></span>
-      <span><img src="https://via.placeholder.com/700x700"></span>
-      <span><img src="https://via.placeholder.com/700x700"></span>
-      <span><img src="https://via.placeholder.com/700x700"></span>
-      <span><img src="https://via.placeholder.com/700x700"></span>
-      <span><img src="https://via.placeholder.com/700x700"></span>
-      <span><img src="https://via.placeholder.com/700x700"></span>
+      <img src="https://via.placeholder.com/700x400">
+      <img src="https://via.placeholder.com/700x600">
+      <img src="https://via.placeholder.com/700x800">
+      <img src="https://via.placeholder.com/700x700">
+      <img src="https://via.placeholder.com/700x600">
+      <img src="https://via.placeholder.com/700x500">
+      <img src="https://via.placeholder.com/700x500">
+      <img src="https://via.placeholder.com/700x600">
+      <img src="https://via.placeholder.com/700x700">
+      <img src="https://via.placeholder.com/700x700">
+      <img src="https://via.placeholder.com/700x700">
+      <img src="https://via.placeholder.com/700x700">
+      <img src="https://via.placeholder.com/700x700">
+      <img src="https://via.placeholder.com/700x700">
+      <img src="https://via.placeholder.com/700x700">
+      <img src="https://via.placeholder.com/700x700">
     </div>
   </div>
 </template>
@@ -35,13 +35,13 @@
 <style lang="stylus" scoped>
 @require '../assets/variables'
 
-#showcase-wrapper
-  padding 5rem 5rem 0 5rem
+h1
+  font-weight 900
+  font-size 12vw
 
 header
   display flex
   justify-content space-between
-  
   a
     text-decoration none
     text-transform uppercase
@@ -52,18 +52,13 @@ header
     &:hover
       color black
 
-h1
-  font-weight 900
-  font-size 12vw
-  margin 5rem 0 2rem 0
-
 button
   border none
   background-color white
   outline none
   cursor pointer
 
-#hamburger 
+#hamburger
   padding 0
   .line
     width 40px
@@ -71,14 +66,46 @@ button
     background-color black
     display block
     margin 0 0 8px auto
-    transition all 0.3s ease-in-out
+
+#grid img
+  display inline-block
+  width 100%
+
+// mobile
+$padding-mobile = 6vw
+
+#showcase-wrapper
+  // Bottom margin is made by image grid
+  padding $padding-mobile $padding-mobile 0 $padding-mobile
+
+h1
+  margin $padding-mobile 0 1rem 0
 
 #grid
-  column-gap 5em
-  column-count 3
-  span
-    width 100%
+  column-gap $padding-mobile
+  column-count 1
+  img
+    padding-bottom $padding-mobile
+
+// tablet
+@media only screen and (min-width: 768px)
+  #grid
+    column-count 2
+
+// desktop
+$padding-desktop = 4vw
+
+@media only screen and (min-width: 1500px)
+  #showcase-wrapper
+    // Bottom margin is made by image grid
+    padding $padding-desktop $padding-desktop 0 $padding-desktop
+
+  h1
+    margin $padding-desktop 0 1rem 0
+
+  #grid
+    column-gap $padding-desktop
+    column-count 3
     img
-      width 100%
-      padding-bottom 5rem
+      padding-bottom $padding-desktop
 </style>
