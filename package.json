@@ -10,7 +10,7 @@
     "url": "git+https://github.com/joealden/joe-suttons-portfolio.git"
   },
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt --hostname 0.0.0.0",
     "develop": "npm run dev",
     "gen": "nuxt generate",
     "generate": "npm run gen"
