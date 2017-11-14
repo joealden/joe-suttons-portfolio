@@ -78,8 +78,8 @@ $padding-mobile = 6vw
   padding $padding-mobile $padding-mobile 0 $padding-mobile
 
 h1
-  font-size 16vw
-  margin $padding-mobile 0 1rem 0
+  font-size 15vw
+  margin $padding-mobile 0 $padding-mobile 0
 
 #grid
   column-gap $padding-mobile
@@ -89,11 +89,14 @@ h1
 
 // tablet
 @media only screen and (min-width: 768px)
+  h1
+    font-size 11vw
+
   #grid
     column-count 2
 
 // desktop
-$padding-desktop = 4vw
+$padding-desktop = 3vw
 
 @media only screen and (min-width: 1500px)
   #showcase-wrapper
@@ -101,7 +104,6 @@ $padding-desktop = 4vw
     padding $padding-desktop $padding-desktop 0 $padding-desktop
 
   h1
-    font-size 12vw
     margin $padding-desktop 0 1rem 0
 
   #grid
