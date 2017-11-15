@@ -85,7 +85,7 @@ button
   span
     display block
     position absolute
-    height 3px
+    height 2px
     width 100%
     background-color black
     opacity 1
