@@ -17,6 +17,8 @@ module.exports = {
 
   loading: false,
 
+  css: ['~/assets/globals.styl'],
+
   build: {
     // Run ESLint on save
     extend(config, ctx) {

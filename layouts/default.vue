@@ -1,22 +1,3 @@
 <template>
   <nuxt/>
 </template>
-
-<style lang="stylus">
-*
-  font-family "aktiv-grotesk"
-  font-size 15px
-
-body
-  margin 0
-  background-color white
-
-.page-enter-active
-.page-leave-active
-  transition all 0.25s ease
-
-.page-enter
-.page-leave-active 
-  opacity 0
-  transform-origin 50% 50%
-</style>
