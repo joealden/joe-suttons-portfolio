@@ -11,9 +11,9 @@
   },
   "scripts": {
     "dev": "nuxt --hostname 0.0.0.0",
-    "develop": "npm run dev",
+    "develop": "yarn dev",
     "gen": "nuxt generate",
-    "generate": "npm run gen"
+    "generate": "yarn gen"
   },
   "dependencies": {
     "nuxt": "^1.0.0-rc11"
