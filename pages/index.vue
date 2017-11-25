@@ -1,11 +1,6 @@
 <template>
-  
+  <div>
+    <h1>Home Page</h1>
+    <p>Test text</p>
+  </div>
 </template>
-
-<script>
-export default {}
-</script>
-
-<style>
-
-</style>
