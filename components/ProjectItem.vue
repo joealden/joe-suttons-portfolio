@@ -35,18 +35,19 @@ export default {
 <style lang="stylus" scoped>
 .image-wrapper
   position relative
-  display inline-block
 
 img
   width 100%
 
+// TODO: position text properly
 .details
   position absolute
-  height 100%
-  width 100%
+  left 50px
+  top 450px
 
   h4
     font-size 30px
+    margin-bottom 0.5rem
 
   span
     font-size 22px
