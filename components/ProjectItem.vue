@@ -44,6 +44,7 @@ img
   position absolute
   bottom 50px
   left 50px
+  color white
 
   h4
     font-size 30px

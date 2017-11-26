@@ -12,28 +12,28 @@
           </div>
           <div id="image-grid">
             <project-item 
-              src="images/project1.jpg"
-              alt="Project 1 alt text"
-              title="Project 1 title"
-              info="Project 1 info"
+              src="images/umoro.jpg"
+              alt="Man in a hooded coat with a hat on"
+              title="Umoro"
+              info="A Random Snippet of info on the Work"
             />
             <project-item 
-              src="images/project1.jpg"
-              alt="Project 2 alt text"
-              title="Project 2 title"
-              info="Project 3 info"
+              src="images/stab-mag.jpg"
+              alt="A beach with surfers"
+              title="Stab Mag"
+              info="A Random Snippet of info on the Work"
             />
             <project-item 
-              src="images/project1.jpg"
-              alt="Project 3 alt text"
-              title="Project 3 title"
-              info="Project 3 info"
+              src="images/counted.jpg"
+              alt="A salad on a plate with a fork"
+              title="Counted"
+              info="A Random Snippet of info on the Work"
             />
             <project-item 
-              src="images/project1.jpg"
-              alt="Project 4 alt text"
-              title="Project 4 title"
-              info="Project 4 info"
+              src="images/logos-lettering.jpg"
+              alt="A dark background"
+              title="Logos and Lettering"
+              info="A Random Snippet of info on the Work"
             />
           </div>
         </section>
