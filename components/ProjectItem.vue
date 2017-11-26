@@ -42,8 +42,8 @@ img
 // TODO: position text properly
 .details
   position absolute
+  bottom 50px
   left 50px
-  top 450px
 
   h4
     font-size 30px
