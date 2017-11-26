@@ -5,7 +5,7 @@
         <header>
           <button @click="closeAbout">X Close</button>
           <nuxt-link to="/">
-            <img alt="Logo">
+            <img src="images/logo-white.svg" alt="Logo">
           </nuxt-link>
         </header>
         <div id="center-main">
@@ -94,7 +94,7 @@ header
     font-size 22px
 
   img
-    color white // temp
+    height 1.5rem
 
   display flex
   justify-content space-between

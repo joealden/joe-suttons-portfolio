@@ -7,7 +7,7 @@
           <nuxt-link to="/contact">Contact</nuxt-link>
         </nav>
         <nuxt-link to="/">
-          <img alt="Logo">
+          <img src="images/logo-black.svg" alt="Logo">
         </nuxt-link>
       </header>
     </div>
@@ -28,6 +28,7 @@ header
 
   nav
     a
+      vertical-align middle
       color #525252
       transition 0.15s ease-in-out
 
@@ -36,6 +37,11 @@ header
 
       &:hover
         color black
+
+  a
+    img
+      height 1.5rem
+      vertical-align middle
 
 .nuxt-link-active
   color black
