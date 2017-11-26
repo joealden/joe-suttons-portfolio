@@ -117,7 +117,7 @@ form
       display inline-block
       transition 0.15s ease-in-out
 
-    &:hover
+    &:hover, &:focus
       span
         transform translateX(-0.5rem)
 </style>
