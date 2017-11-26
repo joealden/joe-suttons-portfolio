@@ -1,31 +1,63 @@
 <template>
   <div>
-    <div id="title-projects-wrapper">
-      <div id="title">
-        <h3>Joe Sutton</h3>
-        <h1>Freelance Digital and Brand Designer</h1>
+    <div class="center-wrapper">
+      <div id="title-projects-wrapper">
+        <div id="title">
+          <h3>Joe Sutton</h3>
+          <h1>Freelance Digital and Brand Designer</h1>
+        </div>
+        <section id="projects">
+          <div id="projects-title">
+            <h2>Projects</h2>
+          </div>
+          <div id="image-grid">
+            <project-item 
+              src="images/project1.jpg"
+              alt="Project 1 alt text"
+              title="Project 1 title"
+              info="Project 1 info"
+            />
+            <project-item 
+              src="images/project1.jpg"
+              alt="Project 2 alt text"
+              title="Project 2 title"
+              info="Project 3 info"
+            />
+            <project-item 
+              src="images/project1.jpg"
+              alt="Project 3 alt text"
+              title="Project 3 title"
+              info="Project 3 info"
+            />
+            <project-item 
+              src="images/project1.jpg"
+              alt="Project 4 alt text"
+              title="Project 4 title"
+              info="Project 4 info"
+            />
+          </div>
+        </section>
       </div>
-      <section id="projects">
-        <div id="projects-title">
-          <h2>Projects</h2>
-        </div>
-        <div id="image-grid">
-        </div>
-      </section>
     </div>
     <section id="contact">
       Have a project in mind, or just a question?
       <nuxt-link to="/contact">Get in Touch</nuxt-link>
     </section>
+    <div class="center-wrapper">
     <footer>
       <span>Joe Sutton - Freelance Digital and Brand Designer</span>
       <button @click="scrollToTop">Back to Top</button>
     </footer>
+    </div>
   </div>
 </template>
 
 <script>
+import ProjectItem from '~/components/ProjectItem'
+
 export default {
+  components: { ProjectItem },
+
   methods: {
     scrollToTop() {
       window.scrollTo(0, 0)
@@ -69,9 +101,10 @@ export default {
       background-color #F2F2F2
 
   #image-grid
-    background-color grey
     margin-top 5rem
-    height 25rem
+    display grid
+    grid-template-columns 1fr 1fr
+    grid-gap 4rem
 
 #contact
   background-color #0C0C0C

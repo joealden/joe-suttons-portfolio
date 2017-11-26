@@ -1,17 +1,19 @@
 <template>
   <div id="center-content">
-    <div id="wrapper">
+    <div class="center-wrapper">
       <header>
         <nav>
           <nuxt-link to="/about">About</nuxt-link>
           <nuxt-link to="/contact">Contact</nuxt-link>
         </nav>
-        <img src="TODO" alt="Logo">
+        <nuxt-link to="/">
+          <img alt="Logo">
+        </nuxt-link>
       </header>
-      <main>
-        <nuxt/>
-      </main>
     </div>
+    <main>
+      <nuxt/>
+    </main>
   </div>
 </template>
 
@@ -19,14 +21,10 @@
 #center-content
   border-top 5px solid black
 
-#wrapper
-  max-width 1600px
-  margin 0 auto
-
 header
   display flex
   justify-content space-between
-  margin 1.25rem 4rem
+  margin 1.5rem 4rem
 
   nav
     a
@@ -39,5 +37,6 @@ header
       &:hover
         color black
 
-/* TODO: Create nav circle underline (Stripe nav flow) */
+.nuxt-link-active
+  color black
 </style>
