@@ -32,7 +32,9 @@
           placeholder="Let me know all the details as well as timeline and budget..."
         />
 
-        <button @click.prevent="submitForm">Send &gt;</button>
+        <button @click.prevent="submitForm">
+          <span>Send</span> &gt;
+        </button>
       </form>
     </div>
   </div>
@@ -109,4 +111,13 @@ form
     text-align right
     margin-top 1rem
     font-size 30px
+
+    span
+      font-size 30px
+      display inline-block
+      transition 0.15s ease-in-out
+
+    &:hover
+      span
+        transform translateX(-0.5rem)
 </style>
