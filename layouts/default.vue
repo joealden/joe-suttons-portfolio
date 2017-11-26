@@ -1,5 +1,5 @@
 <template>
-  <div id="center-content">
+  <div id="black-border">
     <div class="center-wrapper">
       <header>
         <nav>
@@ -18,7 +18,7 @@
 </template>
 
 <style lang="stylus" scoped>
-#center-content
+#black-border
   border-top 5px solid black
 
 header
