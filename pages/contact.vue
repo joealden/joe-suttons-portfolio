@@ -59,7 +59,6 @@ export default {
 }
 </script>
 
-
 <style lang="stylus" scoped>
 #contact-wrapper
   margin 10rem 4rem 5rem 4rem
@@ -95,6 +94,7 @@ form
 
   input, textarea
     border 2px solid #EAEAEA
+    font-size 22px
     padding 1rem
     outline none
     transition 0.15s ease-in-out
