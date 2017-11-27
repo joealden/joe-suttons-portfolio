@@ -1,63 +1,60 @@
 <template>
-  <div id="black-background">
-    <div class="center-wrapper">
-      <div id="center">
-        <header>
-          <button @click="closeAbout">X Close</button>
-          <nuxt-link to="/">
-            <img src="/images/logo-white.svg" alt="Logo">
-          </nuxt-link>
-        </header>
-        <div id="center-main">
-          <p id="main-copy">
-            Delivering bold design solutions that balance
-            form and function. Helping to tell your brand's
-            story, and aiding your business reach its goals.
-          </p>
-          <div id="columns">
-            <div id="about-me">
-              <h2>About Me</h2>
-              <p>
-                I’m a Freelance Designer based near London, who specialises
-                in branding and digital design work. I’ve worked with companies of
-                all sizes, from all across the world. Helping bring their ideas to
-                life or being a part of their brands evolution
-              </p>
-              <div>
-                <a href="https://twitter.com/JosephSutton">Twitter</a> -
-                <a href="https://www.instagram.com/josephsutton_">Instagram</a> -
-                <a href="https://dribbble.com/JoeSutton">Dribbble</a> -
-                <a href="https://www.facebook.com/joe.sutton.581">Facebook</a> -
-                <a href="https://www.behance.net/JoeSutton">Behance</a> 
-              </div>
+  <div class="center-wrapper">
+    <div id="center">
+      <header>
+        <button @click="closeAbout">X Close</button>
+        <nuxt-link to="/">
+          <img src="/images/logo-white.svg" alt="Logo">
+        </nuxt-link>
+      </header>
+      <div id="center-main">
+        <p id="main-copy">
+          Delivering bold design solutions that balance
+          form and function. Helping to tell your brand's
+          story, and aiding your business reach its goals.
+        </p>
+        <div id="columns">
+          <div id="about-me">
+            <h2>About Me</h2>
+            <p>
+              I’m a Freelance Designer based near London, who specialises
+              in branding and digital design work. I’ve worked with companies of
+              all sizes, from all across the world. Helping bring their ideas to
+              life or being a part of their brands evolution
+            </p>
+            <div>
+              <a href="https://twitter.com/JosephSutton">Twitter</a> -
+              <a href="https://www.instagram.com/josephsutton_">Instagram</a> -
+              <a href="https://dribbble.com/JoeSutton">Dribbble</a> -
+              <a href="https://www.facebook.com/joe.sutton.581">Facebook</a> -
+              <a href="https://www.behance.net/JoeSutton">Behance</a> 
             </div>
-            <div id="services">
-              <h2>Services</h2>
-              <p>
-                Digtial Design, User Interface Design, User Experience Design,
-                Editorial Design, Branding, Lettering, Iconography, Project
-                Management, Strategy. 
-              </p>
-              <p>
-                I’ve probably missed some thigns so get in touch. Even if I can’t
-                provide the service you’re after I know lots of people that can
-                help.  I’m more than happy to put a team together. to get the
-                work done under one project, taking the stress away from you
-                finding people you can trust. 
-              </p>
-            </div>
-            <div id="testimonials">
-              <h2>Testimonials</h2>
-              <p>
-                "We commissioned Joe to refresh our wordmark and he hit it out
-                of the park. He was very easy to work with along the way,
-                notifying us of his work schedule and when to expect updates.
-                He listened to our revision requests and ultimately delivered a
-                great new identity for our brand. If you are in the market for a
-                new creative wordmark for your brand, Joe is your man."
-              </p>
-              <span>. . . .</span>
-            </div>
+          </div>
+          <div id="services">
+            <h2>Services</h2>
+            <p>
+              Digtial Design, User Interface Design, User Experience Design,
+              Editorial Design, Branding, Lettering, Iconography, Project
+              Management, Strategy. 
+            </p>
+            <p>
+              I’ve probably missed some thigns so get in touch. Even if I can’t
+              provide the service you’re after I know lots of people that can
+              help.  I’m more than happy to put a team together. to get the
+              work done under one project, taking the stress away from you
+              finding people you can trust. 
+            </p>
+          </div>
+          <div id="testimonials">
+            <h2>Testimonials</h2>
+            <p>
+              "We commissioned Joe to refresh our wordmark and he hit it out
+              of the park. He was very easy to work with along the way,
+              notifying us of his work schedule and when to expect updates.
+              He listened to our revision requests and ultimately delivered a
+              great new identity for our brand. If you are in the market for a
+              new creative wordmark for your brand, Joe is your man."
+            </p>
           </div>
         </div>
       </div>
@@ -79,13 +76,9 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-#black-background
-  background-color black
-  color white
-  height 100vh
-
 #center
-  padding 0 4rem
+  border-top 5px solid black
+  padding 0 4rem 4rem 4rem
 
 header
   button
@@ -131,12 +124,4 @@ header
 
       &:hover
         color white
-
-// temp
-#testimonials
-  p
-    margin-bottom 0
-
-  span
-    font-size 75px
 </style>

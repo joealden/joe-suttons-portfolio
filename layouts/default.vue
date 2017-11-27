@@ -17,6 +17,15 @@
   </div>
 </template>
 
+<script>
+export default {
+  beforeCreate() {
+    document.body.style.backgroundColor = 'white'
+    document.body.style.color = 'black'
+  }
+}
+</script>
+
 <style lang="stylus" scoped>
 #black-border
   border-top 5px solid black
