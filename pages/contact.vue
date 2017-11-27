@@ -62,7 +62,7 @@ export default {
 
 <style lang="stylus" scoped>
 #contact-wrapper
-  margin 10rem 4rem 0 4rem
+  margin 10rem 4rem 5rem 4rem
   display grid
   grid-template-columns 1fr 1fr
 
@@ -73,7 +73,6 @@ export default {
   p
     width 450px
     color #707070
-    font-weight 300 /* ASK JSUTTS */
     line-height 30px
 
   #first-paragraph
