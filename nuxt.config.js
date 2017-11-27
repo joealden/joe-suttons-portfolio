@@ -17,6 +17,9 @@ module.exports = {
 
   loading: false,
 
+  // For dev only
+  mode: 'spa',
+
   css: ['~/assets/styles/globals.styl'],
 
   build: {
