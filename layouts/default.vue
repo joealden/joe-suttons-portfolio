@@ -7,7 +7,7 @@
           <nuxt-link to="/contact">Contact</nuxt-link>
         </nav>
         <nuxt-link to="/">
-          <img src="images/logo-black.svg" alt="Logo">
+          <img src="/images/logo-black.svg" alt="Logo">
         </nuxt-link>
       </header>
     </div>
