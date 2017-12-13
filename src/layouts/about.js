@@ -4,15 +4,21 @@ import styled from 'styled-components'
 
 import '../assets/styles/index.css'
 
-const AboutWrapper = ({ children }) => {
-  document.body.style.backgroundColor = 'black'
-  document.body.style.color = 'white'
+class AboutWrapper extends React.Component {
+  componentDidMount() {
+    document.body.style.backgroundColor = 'black'
+    document.body.style.color = 'white'
+  }
 
-  return (
-    <BlackBorder>
-      <main>{children()}</main>
-    </BlackBorder>
-  )
+  render() {
+    const { children } = this.props
+
+    return (
+      <BlackBorder>
+        <main>{children()}</main>
+      </BlackBorder>
+    )
+  }
 }
 
 const BlackBorder = styled.div`

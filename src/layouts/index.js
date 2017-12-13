@@ -21,16 +21,22 @@ const Header = () => (
   </CenterContent>
 )
 
-const TemplateWrapper = ({ children }) => {
-  document.body.style.backgroundColor = 'white'
-  document.body.style.color = 'black'
+class TemplateWrapper extends React.Component {
+  componentDidMount() {
+    document.body.style.backgroundColor = 'white'
+    document.body.style.color = 'black'
+  }
 
-  return (
-    <BlackBorder>
-      <Header />
-      <main>{children()}</main>
-    </BlackBorder>
-  )
+  render() {
+    const { children } = this.props
+
+    return (
+      <BlackBorder>
+        <Header />
+        <main>{children()}</main>
+      </BlackBorder>
+    )
+  }
 }
 
 const HeaderWrapper = styled.header`
