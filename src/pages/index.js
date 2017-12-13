@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
+import Helmet from 'react-helmet'
 
 import CenterContent from '../components/CenterContent'
 import ProjectItem from '../components/ProjectItem'
@@ -14,6 +15,7 @@ const scrollToTop = () => window.scrollTo(0, 0)
 
 const Home = () => (
   <div>
+    <Helmet title="The Creative Portfolio of Joe Sutton - Home" />
     <CenterContent>
       <TitleAndProjects>
         <Title>
