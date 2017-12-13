@@ -1,7 +1,6 @@
 {
   "name": "joe-suttons-portfilio",
   "description": "The portfolio of Joe Sutton",
-  "author": "Joe Alden <joerobertalden@gmail.com> (joealden.com)",
   "license": "MIT",
   "private": true,
   "homepage": "https://github.com/joealden/joe-suttons-portfolio",
@@ -10,25 +9,16 @@
     "url": "git+https://github.com/joealden/joe-suttons-portfolio.git"
   },
   "scripts": {
-    "dev": "nuxt --hostname 0.0.0.0",
-    "develop": "yarn dev",
-    "gen": "nuxt generate",
-    "generate": "yarn gen"
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "dev": "npm run develop"
   },
   "dependencies": {
-    "nuxt": "^1.0.0-rc11"
-  },
-  "devDependencies": {
-    "babel-eslint": "^7.2.3",
-    "eslint": "^4.3.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-loader": "^1.9.0",
-    "eslint-plugin-html": "^3.1.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.1.1",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.1"
+    "gatsby": "^1.9.127",
+    "gatsby-link": "^1.6.30",
+    "gatsby-plugin-netlify": "^1.0.11",
+    "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-plugin-styled-components": "^2.0.4",
+    "styled-components": "^2.2.4"
   }
 }
