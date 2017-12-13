@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import CenterContent from '../components/CenterContent'
+import sendButton from '../assets/images/sendButton.svg'
 
 const Contact = () => (
   <CenterContent>
@@ -47,7 +48,8 @@ const ContactForm = () => (
       />
     </label>
     <button>
-      <span>Send</span> &gt;
+      <span>Send</span>
+      <img src={sendButton} alt=">" />
     </button>
   </Form>
 )
@@ -127,6 +129,11 @@ const Form = styled.form`
       font-size: 30px;
       display: inline-block;
       transition: 0.15s ease-in-out;
+    }
+
+    img {
+      height: 1rem;
+      margin-left: 0.5rem
     }
 
     &:hover,

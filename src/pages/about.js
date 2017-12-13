@@ -3,13 +3,17 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 
 import CenterContent from '../components/CenterContent'
+
 import logoWhite from '../assets/images/logo-white.svg'
+import xButton from '../assets/images/xButton.svg'
 
 const About = () => (
   <CenterContent>
     <AboutWrapper>
       <Header>
-        <Link to="/">X Close</Link>
+        <Link to="/">
+          <img src={xButton} alt="X" />
+        </Link>
         <Link to="/">
           <img src={logoWhite} alt="Joe Sutton's logo" />
         </Link>
@@ -139,11 +143,11 @@ const AboutMe = styled.div`
 
   div {
     a {
-      margin: 0 0.5rem;
+      margin: 0 0.25rem;
     }
 
     a:first-child {
-      margin: 0 0.5rem 0 0;
+      margin: 0 0.25rem 0 0;
     }
   }
 `
