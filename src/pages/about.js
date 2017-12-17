@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
@@ -7,8 +8,11 @@ import CenterContent from '../components/CenterContent'
 import logoWhite from '../assets/images/logo-white.svg'
 import xButton from '../assets/images/xButton.svg'
 
+import { siteTitle } from '../constants'
+
 const About = () => (
   <CenterContent>
+    <Helmet title={`${siteTitle} - About`} />
     <AboutWrapper>
       <Header>
         <Link to="/">

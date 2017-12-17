@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
@@ -10,10 +11,13 @@ import stabImage from '../assets/images/stab-mag.jpg'
 import countedImage from '../assets/images/counted.jpg'
 import letteringImage from '../assets/images/logos-lettering.jpg'
 
+import { siteTitle } from '../constants'
+
 const scrollToTop = () => window.scrollTo(0, 0)
 
 const Home = () => (
   <div>
+    <Helmet title={`${siteTitle} - Home`} />
     <CenterContent>
       <TitleAndProjects>
         <Title>

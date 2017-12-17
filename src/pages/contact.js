@@ -1,11 +1,15 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import styled from 'styled-components'
 
 import CenterContent from '../components/CenterContent'
 import sendButton from '../assets/images/sendButton.svg'
 
+import { siteTitle } from '../constants'
+
 const Contact = () => (
   <CenterContent>
+    <Helmet title={`${siteTitle} - Contact`} />
     <ContactWrapper>
       <Info>
         <h1>Contact</h1>
