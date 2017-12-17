@@ -1,13 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import Helmet from 'react-helmet'
 
 import CenterContent from '../components/CenterContent'
 import sendButton from '../assets/images/sendButton.svg'
 
 const Contact = () => (
   <CenterContent>
-    <Helmet title="The Creative Portfolio of Joe Sutton - Contact" />
     <ContactWrapper>
       <Info>
         <h1>Contact</h1>

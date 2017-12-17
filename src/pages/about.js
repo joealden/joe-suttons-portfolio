@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
-import Helmet from 'react-helmet'
 
 import CenterContent from '../components/CenterContent'
 
@@ -10,7 +9,6 @@ import xButton from '../assets/images/xButton.svg'
 
 const About = () => (
   <CenterContent>
-    <Helmet title="The Creative Portfolio of Joe Sutton - About" />
     <AboutWrapper>
       <Header>
         <Link to="/">
