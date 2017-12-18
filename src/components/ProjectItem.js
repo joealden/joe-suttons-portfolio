@@ -47,6 +47,19 @@ const Details = styled.div`
       font-size: 1.25vw;
     }
   }
+  @media (max-width: 1200px) {
+    bottom: 5vw;
+    left: 5vw;
+
+    h4 {
+      font-size: 4vw;
+      margin-bottom: 0.5vw;
+    }
+
+    span {
+      font-size: 2.25vw;
+    }
+  }
 `
 
 export default ProjectItem

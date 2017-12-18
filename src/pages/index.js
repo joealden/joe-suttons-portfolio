@@ -72,7 +72,7 @@ const Home = () => (
 
 const TitleAndProjects = styled.div`
   max-width: 1800px;
-  margin: 10rem 4rem 5rem 4rem;
+  margin: 10rem 5vw 5rem 5vw;
 `
 
 const Title = styled.div`
