@@ -88,6 +88,7 @@ const TitleAndProjects = styled.div`
   @media (max-width: 1800px) {
     margin-right: 6vw;
     margin-left: 6vw;
+    margin-bottom: 6vw;
   }
   @media (max-width: 600px) {
     margin-top: 8rem;
@@ -184,6 +185,26 @@ const Contact = styled.section`
     font-size: 30px;
     margin-left: 0.5rem;
   }
+
+  @media (max-width: 1000px) {
+    font-size: 3vw;
+    padding: 12vw 0;
+
+    a {
+      font-size: 3vw;
+    }
+  }
+
+  @media (max-width: 414px) {
+    font-size: 4vw;
+    padding: 18vw 0;
+
+    a {
+      display: block;
+      margin-top: 1.5vw;
+      font-size: 4vw;
+    }
+  }
 `
 
 const Footer = styled.footer`
@@ -199,6 +220,7 @@ const Footer = styled.footer`
   @media (max-width: 1200px) {
     display: block;
     text-align: center;
+    font-size: 2vw;
   }
 `
 
