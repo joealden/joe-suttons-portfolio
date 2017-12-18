@@ -195,7 +195,7 @@ const Contact = styled.section`
     }
   }
 
-  @media (max-width: 414px) {
+  @media (max-width: 480px) {
     font-size: 4vw;
     padding: 18vw 0;
 

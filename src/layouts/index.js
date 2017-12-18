@@ -13,7 +13,7 @@ const Header = () => (
   <CenterContent>
     <HeaderWrapper>
       <Navigation>
-        <Media query="(min-width: 414px)">
+        <Media query="(min-width: 480px)">
           {matches =>
             matches ? (
               <div>
