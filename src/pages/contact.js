@@ -13,16 +13,18 @@ const Contact = () => (
     <ContactWrapper>
       <Info>
         <h1>Contact</h1>
-        <FirstParagraph>
-          If you're contacting me about work, then it'd be great if you could
-          include the details of the project, budget, deadline etc. to help
-          speed up the process. Also feel free to get in touch if you have any
-          questions.
-        </FirstParagraph>
-        <SecondParagraph>
-          If you would rather not use the form, you can email me directly:
-          &nbsp; <a href="mailto:hi@joesutton.co">hi@joesutton.co</a>
-        </SecondParagraph>
+        <ParagraphGrid>
+          <FirstParagraph>
+            If you're contacting me about work, then it'd be great if you could
+            include the details of the project, budget, deadline etc. to help
+            speed up the process. Also feel free to get in touch if you have any
+            questions.
+          </FirstParagraph>
+          <SecondParagraph>
+            If you would rather not use the form, you can email me directly:
+            &nbsp; <a href="mailto:hi@joesutton.co">hi@joesutton.co</a>
+          </SecondParagraph>
+        </ParagraphGrid>
       </Info>
       <ContactForm />
     </ContactWrapper>
@@ -62,6 +64,16 @@ const ContactWrapper = styled.div`
   margin: 10rem 4rem 5rem 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @media (max-width: 1800px) {
+    margin: 10rem 6vw 6vw 6vw;
+  }
+  @media (max-width: 1500px) {
+    grid-template-columns: 1fr;
+  }
+  @media (max-width: 1200px) {
+    margin-top: 7rem;
+  }
 `
 
 const Info = styled.div`
@@ -74,15 +86,54 @@ const Info = styled.div`
     color: #707070;
     line-height: 30px;
   }
+
+  @media (max-width: 1200px) {
+    h1 {
+      font-size: 40px;
+    }
+  }
+  @media (max-width: 500px) {
+    p {
+      width: 100%;
+    }
+  }
+`
+
+const ParagraphGrid = styled.div`
+  display: block;
+  margin-top: 4rem;
+
+  @media (max-width: 1500px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    margin-bottom: 6rem;
+  }
+  @media (max-width: 1200px) {
+    display: block;
+    margin-bottom: 0;
+    margin-top: 3rem;
+  }
 `
 
 const FirstParagraph = styled.p`
-  margin: 4rem 0 6rem 0;
+  @media (min-width: 1501px) {
+    margin-bottom: 6rem;
+  }
+  @media (max-width: 1200px) {
+    margin-bottom: 3rem;
+  }
 `
 
 const SecondParagraph = styled.p`
+  justify-self: end;
+
   a {
     color: black;
+  }
+
+  @media (max-width: 1200px) {
+    margin-bottom: 3rem;
   }
 `
 
