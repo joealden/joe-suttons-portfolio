@@ -72,7 +72,11 @@ const Home = () => (
 
 const TitleAndProjects = styled.div`
   max-width: 1800px;
-  margin: 10rem 5vw 5rem 5vw;
+  margin: 10rem 5rem 5rem 5rem;
+
+  @media (max-width: 1800px) {
+    margin: 10rem 5vw 5rem 5vw;
+  }
 `
 
 const Title = styled.div`
@@ -113,7 +117,7 @@ const ProjectsTitle = styled.div`
 `
 
 const ImageGrid = styled.div`
-  margin-top: 5rem;
+  margin-top: 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 4rem;

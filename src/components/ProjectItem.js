@@ -52,12 +52,12 @@ const Details = styled.div`
     left: 5vw;
 
     h4 {
-      font-size: 4vw;
-      margin-bottom: 0.5vw;
+      font-size: 3vw;
+      margin-bottom: 1vw;
     }
 
     span {
-      font-size: 2.25vw;
+      font-size: 1.75vw;
     }
   }
 `

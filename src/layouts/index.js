@@ -42,7 +42,11 @@ class TemplateWrapper extends React.Component {
 const HeaderWrapper = styled.header`
   display: flex;
   justify-content: space-between;
-  margin: 1.5rem 5vw;
+  margin: 1.5rem 5rem;
+
+  @media (max-width: 1800px) {
+    margin: 1.5rem 5vw;
+  }
 `
 
 const BlackBorder = styled.div`
