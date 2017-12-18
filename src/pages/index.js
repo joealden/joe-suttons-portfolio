@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
+import Media from 'react-media'
 
 import CenterContent from '../components/CenterContent'
 import ProjectItem from '../components/ProjectItem'
@@ -62,10 +63,20 @@ const Home = () => (
       <Link to="/contact">Get in Touch</Link>
     </Contact>
     <CenterContent>
-      <Footer>
-        <span>Joe Sutton - Freelance Digital and Brand Designer</span>
-        <button onClick={scrollToTop}>Back to Top</button>
-      </Footer>
+      <Media query="(min-width: 1200px)">
+        {matches =>
+          matches ? (
+            <Footer>
+              <span>Joe Sutton - Freelance Digital and Brand Designer</span>
+              <button onClick={scrollToTop}>Back to Top</button>
+            </Footer>
+          ) : (
+            <Footer>
+              <span>Joe Sutton - Freelance Digital and Brand Designer</span>
+            </Footer>
+          )
+        }
+      </Media>
     </CenterContent>
   </div>
 )
@@ -75,7 +86,11 @@ const TitleAndProjects = styled.div`
   margin: 10rem 5rem 5rem 5rem;
 
   @media (max-width: 1800px) {
-    margin: 10rem 5vw 5rem 5vw;
+    margin-right: 6vw;
+    margin-left: 6vw;
+  }
+  @media (max-width: 600px) {
+    margin-top: 8rem;
   }
 `
 
@@ -90,6 +105,18 @@ const Title = styled.div`
     font-size: 50px;
     width: 419px;
     line-height: 60px;
+  }
+
+  @media (max-width: 650px) {
+    h3 {
+      font-size: 3.5vw;
+    }
+
+    h1 {
+      font-size: 7.5vw;
+      width: 70vw;
+      line-height: 9vw;
+    }
   }
 `
 
@@ -114,6 +141,18 @@ const ProjectsTitle = styled.div`
     height: 2px;
     background-color: #f2f2f2;
   }
+
+  @media (max-width: 1800px) {
+    &::before {
+      margin: 0 3vw 6px 0;
+    }
+  }
+  @media (max-width: 768px) {
+    margin-top: 4vw;
+    h2 {
+      font-size: 5vw;
+    }
+  }
 `
 
 const ImageGrid = styled.div`
@@ -127,6 +166,9 @@ const ImageGrid = styled.div`
   }
   @media (max-width: 1200px) {
     grid-template-columns: 1fr;
+  }
+  @media (max-width: 768px) {
+    margin-top: 9vw;
   }
 `
 
@@ -152,6 +194,11 @@ const Footer = styled.footer`
 
   button {
     color: #959595;
+  }
+
+  @media (max-width: 1200px) {
+    display: block;
+    text-align: center;
   }
 `
 

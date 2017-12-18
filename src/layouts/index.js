@@ -1,8 +1,10 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
+import Media from 'react-media'
 
 import CenterContent from '../components/CenterContent'
+import HamburgerIcon from '../components/HamburgerIcon'
 import logoBlack from '../assets/images/logo-black.svg'
 
 import '../assets/styles/index.css'
@@ -11,8 +13,18 @@ const Header = () => (
   <CenterContent>
     <HeaderWrapper>
       <Navigation>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
+        <Media query="(min-width: 414px)">
+          {matches =>
+            matches ? (
+              <div>
+                <Link to="/about">About</Link>
+                <Link to="/contact">Contact</Link>
+              </div>
+            ) : (
+              <HamburgerIcon />
+            )
+          }
+        </Media>
       </Navigation>
       <Link to="/">
         <LogoWrapper src={logoBlack} alt="Joe Sutton's logo" />
@@ -45,7 +57,7 @@ const HeaderWrapper = styled.header`
   margin: 1.5rem 5rem;
 
   @media (max-width: 1800px) {
-    margin: 1.5rem 5vw;
+    margin: 1.5rem 6vw;
   }
 `
 
@@ -54,7 +66,7 @@ const BlackBorder = styled.div`
 `
 
 const Navigation = styled.nav`
-  a {
+  div a {
     vertical-align: middle;
     color: #525252;
     transition: 0.15s ease-in-out;

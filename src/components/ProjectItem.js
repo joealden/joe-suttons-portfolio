@@ -60,6 +60,30 @@ const Details = styled.div`
       font-size: 1.75vw;
     }
   }
+
+  @media (max-width: 1000px) {
+    bottom: 5vw;
+    left: 5vw;
+
+    h4 {
+      font-size: 1.75rem;
+      margin-bottom: 1.25vw;
+    }
+
+    span {
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 500px) {
+    h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0;
+    }
+
+    span {
+      font-size: 0.75rem;
+    }
+  }
 `
 
 export default ProjectItem
