@@ -117,6 +117,13 @@ const ImageGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 4rem;
+
+  @media (max-width: 1800px) {
+    grid-gap: 4vw;
+  }
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 const Contact = styled.section`
