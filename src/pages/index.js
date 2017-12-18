@@ -196,13 +196,13 @@ const Contact = styled.section`
   }
 
   @media (max-width: 480px) {
-    font-size: 4vw;
+    font-size: 4.5vw;
     padding: 18vw 0;
 
     a {
       display: block;
       margin-top: 1.5vw;
-      font-size: 4vw;
+      font-size: 4.5vw;
     }
   }
 `
@@ -220,7 +220,12 @@ const Footer = styled.footer`
   @media (max-width: 1200px) {
     display: block;
     text-align: center;
-    font-size: 2vw;
+    width: 100%;
+    margin: 1rem 0;
+
+    span {
+      font-size: 4vw;
+    }
   }
 `
 
