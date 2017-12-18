@@ -222,7 +222,8 @@ const Footer = styled.footer`
     text-align: center;
     width: 100%;
     margin: 1rem 0;
-
+  }
+  @media (max-width: 400px) {
     span {
       font-size: 4vw;
     }
