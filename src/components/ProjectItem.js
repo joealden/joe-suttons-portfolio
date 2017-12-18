@@ -33,6 +33,20 @@ const Details = styled.div`
   span {
     font-size: 22px;
   }
+
+  @media (max-width: 1800px) {
+    bottom: 2.75vw;
+    left: 2.75vw;
+
+    h4 {
+      font-size: 1.75vw;
+      margin-bottom: 0.5vw;
+    }
+
+    span {
+      font-size: 1.25vw;
+    }
+  }
 `
 
 export default ProjectItem
