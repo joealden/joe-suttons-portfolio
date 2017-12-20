@@ -68,10 +68,10 @@ const ContactWrapper = styled.div`
   @media (max-width: 1800px) {
     margin: 10rem 6vw 6vw 6vw;
   }
-  @media (max-width: 1500px) {
+  @media (max-width: 1300px) {
     grid-template-columns: 1fr;
   }
-  @media (max-width: 1200px) {
+  @media (max-width: 900px) {
     margin-top: 7rem;
   }
 `
@@ -87,7 +87,7 @@ const Info = styled.div`
     line-height: 30px;
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 900px) {
     h1 {
       font-size: 40px;
     }
@@ -103,31 +103,43 @@ const ParagraphGrid = styled.div`
   display: block;
   margin-top: 4rem;
 
-  @media (max-width: 1500px) {
+  @media (max-width: 1300px) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: end;
+    grid-template-columns: 450px 450px;
+    grid-gap: 4rem;
     margin-bottom: 6rem;
+
+    p {
+      width: 100%;
+    }
   }
-  @media (max-width: 1200px) {
+  @media (max-width: 1100px) {
+    grid-template-columns: 1fr 1fr;
+    p {
+      width: 100%;
+    }
+  }
+  @media (max-width: 900px) {
     display: block;
     margin-bottom: 0;
     margin-top: 3rem;
+
+    p {
+      width: 450px;
+    }
   }
 `
 
 const FirstParagraph = styled.p`
-  @media (min-width: 1501px) {
+  @media (min-width: 1301px) {
     margin-bottom: 6rem;
   }
-  @media (max-width: 1200px) {
+  @media (max-width: 900px) {
     margin-bottom: 3rem;
   }
 `
 
 const SecondParagraph = styled.p`
-  justify-self: end;
-
   a {
     color: black;
   }
