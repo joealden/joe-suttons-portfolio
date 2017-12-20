@@ -110,7 +110,7 @@ const Title = styled.div`
 
   @media (max-width: 650px) {
     h3 {
-      font-size: 3.5vw;
+      font-size: 4.5vw;
     }
 
     h1 {
