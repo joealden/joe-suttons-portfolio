@@ -220,12 +220,16 @@ const Footer = styled.footer`
   @media (max-width: 1200px) {
     display: block;
     text-align: center;
-    width: 100%;
     margin: 1rem 0;
   }
-  @media (max-width: 400px) {
+  @media (max-width: 700px) {
     span {
-      font-size: 4vw;
+      font-size: 2.5vw;
+    }
+  }
+  @media (max-width: 480px) {
+    span {
+      font-size: 3vw;
     }
   }
 `
