@@ -92,11 +92,6 @@ const Info = styled.div`
       font-size: 40px;
     }
   }
-  @media (max-width: 500px) {
-    p {
-      width: 100%;
-    }
-  }
 `
 
 const ParagraphGrid = styled.div`
@@ -128,7 +123,7 @@ const ParagraphGrid = styled.div`
       width: 450px;
     }
   }
-  @media (max-width: 600px) {
+  @media (max-width: 520px) {
     p {
       width: 100%;
     }
