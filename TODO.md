@@ -1,11 +1,5 @@
 # TODO
 
-## Home Page
-
-* Make footer text smaller on mobile
-* Add more padding to contact section
-* Change size of 'Joe Sutton' at top
-
 ## Contact Page
 
 * Move second paragraph at tablet breakpoint to the top
