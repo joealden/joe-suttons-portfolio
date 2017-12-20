@@ -229,7 +229,7 @@ const Footer = styled.footer`
   }
   @media (max-width: 480px) {
     span {
-      font-size: 3vw;
+      font-size: 3.2vw;
     }
   }
 `
