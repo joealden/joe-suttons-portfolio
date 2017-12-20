@@ -177,13 +177,14 @@ const Form = styled.form`
   input,
   textarea {
     border: 2px solid #eaeaea;
-    font-size: 22px;
     padding: 1rem;
     outline: none;
     transition: 0.15s ease-in-out;
+    box-shadow: none;
+    border-radius: 0;
 
     &:focus {
-      border: 2px solid black;
+      border: 2px solid #707070;
     }
   }
 
