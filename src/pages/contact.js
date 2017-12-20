@@ -128,6 +128,11 @@ const ParagraphGrid = styled.div`
       width: 450px;
     }
   }
+  @media (max-width: 600px) {
+    p {
+      width: 100%;
+    }
+  }
 `
 
 const FirstParagraph = styled.p`
