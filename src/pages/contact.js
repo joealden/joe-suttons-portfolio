@@ -175,7 +175,7 @@ const Form = styled.form`
     padding: 1rem;
     outline: none;
     transition: 0.15s ease-in-out;
-    box-shadow: none;
+    -webkit-appearance: none;
     border-radius: 0;
 
     &:focus {
