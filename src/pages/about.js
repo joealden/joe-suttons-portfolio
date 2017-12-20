@@ -35,7 +35,7 @@ const About = () => (
               I’m a Freelance Designer based near London, who specialises in
               branding and digital design work. I’ve worked with companies of
               all sizes, from all across the world. Helping bring their ideas to
-              life or being a part of their brands evolution
+              life or being a part of their brands evolution.
             </p>
             <div>
               <a href="https://twitter.com/JosephSutton">Twitter</a>
@@ -57,9 +57,9 @@ const About = () => (
               Management, Strategy.
             </p>
             <p>
-              I’ve probably missed some thigns so get in touch. Even if I can’t
+              I’ve probably missed some things so get in touch. Even if I can’t
               provide the service you’re after I know lots of people that can
-              help. I’m more than happy to put a team together. to get the work
+              help. I’m more than happy to put a team together, to get the work
               done under one project, taking the stress away from you finding
               people you can trust.
             </p>
