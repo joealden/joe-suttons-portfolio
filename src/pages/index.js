@@ -197,7 +197,7 @@ const Contact = styled.section`
 
   @media (max-width: 480px) {
     font-size: 4.5vw;
-    padding: 18vw 0;
+    padding: 25vw 0;
 
     a {
       display: block;
