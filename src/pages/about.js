@@ -68,7 +68,7 @@ const About = () => (
           </Services>
           <Testimonials>
             <h2>Testimonials</h2>
-            <Slider dots={true} speed={500} arrows={false} fade={true}>
+            <Slider dots={true} speed={400} arrows={false}>
               <p>
                 "We commissioned Joe to refresh our wordmark and he hit it out
                 of the park. He was very easy to work with along the way,
