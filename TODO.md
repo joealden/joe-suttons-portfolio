@@ -1,12 +1,21 @@
 # TODO
 
-## Contact Page
+## About Page
 
-* Move second paragraph at tablet breakpoint to the top
-* Make margin in between the columns is the same as the edge (5rem?)
-* Change color of input boxes to body text color on focus
-* Make the text in the input boxes the same size as the body text
-* inputs
-  * box-shadow: 0;
-  * border-radius: 0;
-* Move mobile breakpoint to 900px - make columns smaller when small tablet
+* Make it responsive like other pages
+* Move it into a non-page component
+* Render it not as a route
+
+## General
+
+* Implement the stripe like nav follow dot
+* Add page transitions between home and contact
+* Implement the contact functionality somehow
+  * Use graphql-request to graphcool API
+  * Would allow for keeping record of people
+  * Have a resolver / hook function that uses nodemailer
+  * Send it from something like mailbot@joesutton.co
+* Further work on ProjectItem component
+  * Add CSS image zoom on hover
+  * Make the whole component clickable
+* Look into the issue Joe is having with the font
