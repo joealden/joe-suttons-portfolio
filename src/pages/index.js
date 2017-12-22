@@ -211,7 +211,7 @@ const Footer = styled.footer`
   display: flex;
   justify-content: space-between;
   color: #959595;
-  margin: 1.5rem 4rem;
+  margin: 1.5rem 5rem;
 
   button {
     color: #959595;

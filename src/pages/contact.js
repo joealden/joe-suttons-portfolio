@@ -61,7 +61,7 @@ const ContactForm = () => (
 )
 
 const ContactWrapper = styled.div`
-  margin: 10rem 4rem 5rem 4rem;
+  margin: 10rem 5rem 5rem 5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
 
