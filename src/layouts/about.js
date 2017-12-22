@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 
 import '../assets/styles/index.css'
+import '../assets/styles/about.css'
 
 class AboutWrapper extends React.Component {
   componentDidMount() {

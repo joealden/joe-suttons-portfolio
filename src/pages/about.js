@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
+import Slider from 'react-slick'
 
 import CenterContent from '../components/CenterContent'
 
@@ -17,6 +18,7 @@ const About = () => (
       <Header>
         <Link to="/">
           <img src={xButton} alt="X" />
+          <span>Close</span>
         </Link>
         <Link to="/">
           <img src={logoWhite} alt="Joe Sutton's logo" />
@@ -66,14 +68,19 @@ const About = () => (
           </Services>
           <Testimonials>
             <h2>Testimonials</h2>
-            <p>
-              "We commissioned Joe to refresh our wordmark and he hit it out of
-              the park. He was very easy to work with along the way, notifying
-              us of his work schedule and when to expect updates. He listened to
-              our revision requests and ultimately delivered a great new
-              identity for our brand. If you are in the market for a new
-              creative wordmark for your brand, Joe is your man."
-            </p>
+            <Slider dots={true} speed={500} arrows={false} fade={true}>
+              <p>
+                "We commissioned Joe to refresh our wordmark and he hit it out
+                of the park. He was very easy to work with along the way,
+                notifying us of his work schedule and when to expect updates. He
+                listened to our revision requests and ultimately delivered a
+                great new identity for our brand. If you are in the market for a
+                new creative wordmark for your brand, Joe is your man."
+              </p>
+              <p>"Test 2"</p>
+              <p>"Test 3"</p>
+              <p>"Test 4"</p>
+            </Slider>
           </Testimonials>
         </Columns>
       </AboutMain>
@@ -82,7 +89,11 @@ const About = () => (
 )
 
 const AboutWrapper = styled.div`
-  padding: 0 4rem 4rem 4rem;
+  padding: 0 5rem 5rem 5rem;
+
+  @media (max-width: 1800px) {
+    padding: 0 6vw 6vw 6vw;
+  }
 `
 
 const Header = styled.header`
@@ -91,13 +102,20 @@ const Header = styled.header`
   padding: 1.5rem 0;
 
   a {
+    display: flex;
+    align-items: center;
     color: white;
     background-color: black;
     font-size: 22px;
-  }
 
-  img {
-    height: 1.5rem;
+    img {
+      height: 1.5rem;
+    }
+
+    span {
+      font-size: 22px;
+      margin-left: 0.75rem;
+    }
   }
 `
 
@@ -161,6 +179,8 @@ const Services = styled.div`
     margin-bottom: 2rem;
   }
 `
-const Testimonials = styled.div``
+const Testimonials = styled.div`
+  width: 30rem;
+`
 
 export default About
