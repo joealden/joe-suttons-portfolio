@@ -69,17 +69,44 @@ const About = () => (
           <Testimonials>
             <h2>Testimonials</h2>
             <Slider dots={true} speed={400} arrows={false}>
-              <p>
-                "We commissioned Joe to refresh our wordmark and he hit it out
-                of the park. He was very easy to work with along the way,
-                notifying us of his work schedule and when to expect updates. He
-                listened to our revision requests and ultimately delivered a
-                great new identity for our brand. If you are in the market for a
-                new creative wordmark for your brand, Joe is your man."
-              </p>
-              <p>"Test 2"</p>
-              <p>"Test 3"</p>
-              <p>"Test 4"</p>
+              <div>
+                <p>
+                  "We commissioned Joe to refresh our wordmark and he hit it out
+                  of the park. He was very easy to work with along the way,
+                  notifying us of his work schedule and when to expect updates.
+                  He listened to our revision requests and ultimately delivered
+                  a great new identity for our brand. If you are in the market
+                  for a new creative wordmark for your brand, Joe is your man."
+                </p>
+                <span>Scott Anderson, Threadbird</span>
+              </div>
+              <div>
+                <p>
+                  “I enjoyed working with Joe. During the whole time of the
+                  project, he demonstrated a high level of talent, skill,
+                  professionalism and an overall profound understanding of our
+                  brand. I recommend working with him. ”
+                </p>
+                <span>Deniz Caglayan, Lunchio</span>
+              </div>
+              <div>
+                <p>
+                  "Joe's a young designer with a bright future. Approachable,
+                  talented and professional he's got the perfect make up of a
+                  great designer. The identity he created for us was off the
+                  chart and looks awesome. So so happy with his work."
+                </p>
+                <span>Jonathan Munn, Keen</span>
+              </div>
+              <div>
+                <p>
+                  "Joe helped us change Atdaa's logo. He understood the problem
+                  at a glance and came up with many ideas along the way. I was
+                  impressed with his ability to adapt to our never ending
+                  demands and major changes in the design direction."
+                </p>
+                <span>Kaan L Caglar, Atdaa</span>
+              </div>
             </Slider>
           </Testimonials>
         </Columns>
@@ -129,6 +156,10 @@ const MainCopy = styled.p`
   font-size: 50px;
   width: 915px;
   margin: 10rem 0;
+
+  @media (max-width: 1050px) {
+    width: 100%;
+  }
 `
 
 const Columns = styled.div`
@@ -156,6 +187,10 @@ const Columns = styled.div`
       }
     }
   }
+
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `
 
 const AboutMe = styled.div`
@@ -180,7 +215,15 @@ const Services = styled.div`
   }
 `
 const Testimonials = styled.div`
-  width: 30rem;
+  width: 30rem; /* temp */
+
+  div.slick-slide {
+    span {
+      display: block;
+      margin-top: 1rem;
+      color: #767676;
+    }
+  }
 `
 
 export default About
