@@ -1,6 +1,11 @@
 .slick-dots {
-  bottom: -2.5rem;
+  position: sticky;
+  margin-top: 1rem;
   text-align: left;
+}
+
+.slick-dots li:first-child {
+  margin-left: 0;
 }
 
 .slick-dots li button::before {
