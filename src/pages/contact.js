@@ -81,12 +81,6 @@ const Info = styled.div`
     font-size: 50px;
   }
 
-  p {
-    width: 450px;
-    color: #707070;
-    line-height: 30px;
-  }
-
   @media (max-width: 900px) {
     h1 {
       font-size: 40px;
@@ -97,6 +91,12 @@ const Info = styled.div`
 const ParagraphGrid = styled.div`
   display: block;
   margin-top: 4rem;
+
+  p {
+    width: 450px;
+    color: #707070;
+    line-height: 30px;
+  }
 
   @media (max-width: 1300px) {
     display: grid;
@@ -110,6 +110,7 @@ const ParagraphGrid = styled.div`
   }
   @media (max-width: 1100px) {
     grid-template-columns: 1fr 1fr;
+
     p {
       width: 100%;
     }
