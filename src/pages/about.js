@@ -165,7 +165,8 @@ const MainCopy = styled.p`
 const Columns = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 7rem;
+  grid-column-gap: 6rem;
+  grid-row-gap: 2rem;
 
   h2 {
     font-size: 30px;
@@ -188,8 +189,8 @@ const Columns = styled.div`
     }
   }
 
-  @media (max-width: 1200px) {
-    grid-template-columns: 1fr 1fr;
+  @media (max-width: 1550px) {
+    grid-template-columns: [start] 1fr [middle] 1fr [end];
   }
 `
 
@@ -218,6 +219,11 @@ const Services = styled.div`
 `
 const Testimonials = styled.div`
   overflow-x: hidden;
+
+  @media (max-width: 1550px) {
+    grid-column-start: start;
+    grid-column-end: end;
+  }
 
   div.slick-slide {
     span {
