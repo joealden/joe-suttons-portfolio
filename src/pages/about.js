@@ -194,6 +194,8 @@ const Columns = styled.div`
 `
 
 const AboutMe = styled.div`
+  overflow-x: hidden;
+
   p {
     margin-bottom: 2rem;
   }
@@ -215,7 +217,7 @@ const Services = styled.div`
   }
 `
 const Testimonials = styled.div`
-  width: 30rem; /* temp */
+  overflow-x: hidden;
 
   div.slick-slide {
     span {
