@@ -39,17 +39,6 @@ const About = () => (
               all sizes, from all across the world. Helping bring their ideas to
               life or being a part of their brands evolution.
             </p>
-            <div>
-              <a href="https://twitter.com/JosephSutton">Twitter</a>
-              -
-              <a href="https://www.instagram.com/josephsutton_">Instagram</a>
-              -
-              <a href="https://dribbble.com/JoeSutton">Dribbble</a>
-              -
-              <a href="https://www.facebook.com/joe.sutton.581">Facebook</a>
-              -
-              <a href="https://www.behance.net/JoeSutton">Behance</a>
-            </div>
           </AboutMe>
           <Services>
             <h2>Services</h2>
@@ -111,6 +100,17 @@ const About = () => (
           </Testimonials>
         </Columns>
       </AboutMain>
+      <SocialLinks>
+        <a href="https://twitter.com/JosephSutton">Twitter</a>
+        -
+        <a href="https://www.instagram.com/josephsutton_">Instagram</a>
+        -
+        <a href="https://dribbble.com/JoeSutton">Dribbble</a>
+        -
+        <a href="https://www.facebook.com/joe.sutton.581">Facebook</a>
+        -
+        <a href="https://www.behance.net/JoeSutton">Behance</a>
+      </SocialLinks>
     </AboutWrapper>
   </CenterContent>
 )
@@ -154,11 +154,17 @@ const AboutMain = styled.div`
 
 const MainCopy = styled.p`
   font-size: 50px;
-  width: 915px;
+  width: 900px;
   margin: 10rem 0;
 
   @media (max-width: 1050px) {
     width: 100%;
+  }
+  @media (max-width: 675px) {
+    font-size: 7.5vw;
+  }
+  @media (max-width: 1050px) {
+    margin: 20vw 0 15vw 0;
   }
 `
 
@@ -178,19 +184,32 @@ const Columns = styled.div`
     line-height: 30px;
   }
 
-  div {
-    a {
-      color: #767676;
-      transition: 0.15s ease-in-out;
+  @media (max-width: 1800px) {
+    grid-column-gap: 6vw;
+  }
+  @media (max-width: 1500px) {
+    grid-template-columns: 468px 468px;
+  }
+  @media (max-width: 1150px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 900px) {
+    grid-template-columns: 468px;
+  }
+  @media (max-width: 550px) {
+    grid-template-columns: 1fr;
+    grid-row-gap: 3vw;
 
-      &:hover {
-        color: white;
-      }
+    h2 {
+      font-size: 5.5vw;
+      margin-bottom: 5vw;
     }
   }
-
-  @media (max-width: 1550px) {
-    grid-template-columns: [start] 1fr [middle] 1fr [end];
+  @media (max-width: 450px) {
+    h2 {
+      font-size: 6vw;
+      margin-bottom: 5vw;
+    }
   }
 `
 
@@ -199,16 +218,6 @@ const AboutMe = styled.div`
 
   p {
     margin-bottom: 2rem;
-  }
-
-  div {
-    a {
-      margin: 0 0.25rem;
-    }
-
-    a:first-child {
-      margin: 0 0.25rem 0 0;
-    }
   }
 `
 
@@ -220,16 +229,41 @@ const Services = styled.div`
 const Testimonials = styled.div`
   overflow-x: hidden;
 
-  @media (max-width: 1550px) {
-    grid-column-start: start;
-    grid-column-end: end;
-  }
-
   div.slick-slide {
     span {
       display: block;
       margin-top: 1rem;
       color: #767676;
+    }
+  }
+`
+
+const SocialLinks = styled.footer`
+  margin-top: 10rem;
+
+  a {
+    margin: 0 0.25rem;
+    color: #767676;
+    transition: 0.15s ease-in-out;
+
+    &:hover {
+      color: white;
+    }
+
+    &:first-child {
+      margin: 0 0.25rem 0 0;
+    }
+  }
+
+  @media (max-width: 1050px) {
+    margin-top: 15vw;
+  }
+  @media (max-width: 450px) {
+    font-size: 4vw;
+    text-align: center;
+
+    a {
+      font-size: 4vw;
     }
   }
 `
