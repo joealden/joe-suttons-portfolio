@@ -5,14 +5,13 @@ exports.onCreatePage = async ({ page, boundActionCreators }) => {
 
   return new Promise((resolve, reject) => {
     // Set layout for about page
-    if (page.path.match(/^\/about/)) {
+    if (page.path.match(/^\/about/) || page.path.match(/^\/menu/)) {
       // It's assumed that `landingPage.js` exists in the `/layouts/` directory
-      page.layout = 'about'
+      page.layout = 'black'
 
       // Update the page.
       createPage(page)
     }
-
     resolve()
   })
 }

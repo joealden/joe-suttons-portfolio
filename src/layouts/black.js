@@ -3,9 +3,8 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 
 import '../assets/styles/index.css'
-import '../assets/styles/about.css'
 
-class AboutWrapper extends React.Component {
+class BlackWrapper extends React.Component {
   componentDidMount() {
     document.body.style.backgroundColor = 'black'
     document.body.style.color = 'white'
@@ -14,16 +13,8 @@ class AboutWrapper extends React.Component {
   render() {
     const { children } = this.props
 
-    return (
-      <BlackBorder>
-        <main>{children()}</main>
-      </BlackBorder>
-    )
+    return <main>{children()}</main>
   }
 }
 
-const BlackBorder = styled.div`
-  border-top: 5px solid black;
-`
-
-export default AboutWrapper
+export default BlackWrapper

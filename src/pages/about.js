@@ -11,109 +11,118 @@ import xButton from '../assets/images/xButton.svg'
 
 import { siteTitle } from '../constants'
 
+import '../assets/styles/about.css'
+
 const About = () => (
-  <CenterContent>
-    <Helmet title={`${siteTitle} - About`} />
-    <AboutWrapper>
-      <Header>
-        <Link to="/">
-          <img src={xButton} alt="X" />
-          <span>Close</span>
-        </Link>
-        <Link to="/">
-          <img src={logoWhite} alt="Joe Sutton's logo" />
-        </Link>
-      </Header>
-      <AboutMain>
-        <MainCopy>
-          Delivering bold design solutions that balance form and function.
-          Helping to tell your brand's story, and aiding your business reach its
-          goals.
-        </MainCopy>
-        <Columns>
-          <AboutMe>
-            <h2>About Me</h2>
-            <p>
-              I’m a Freelance Designer based near London, who specialises in
-              branding and digital design work. I’ve worked with companies of
-              all sizes, from all across the world. Helping bring their ideas to
-              life or being a part of their brands evolution.
-            </p>
-          </AboutMe>
-          <Services>
-            <h2>Services</h2>
-            <p>
-              Digtial Design, User Interface Design, User Experience Design,
-              Editorial Design, Branding, Lettering, Iconography, Project
-              Management, Strategy.
-            </p>
-            <p>
-              I’ve probably missed some things so get in touch. Even if I can’t
-              provide the service you’re after I know lots of people that can
-              help. I’m more than happy to put a team together, to get the work
-              done under one project, taking the stress away from you finding
-              people you can trust.
-            </p>
-          </Services>
-          <Testimonials>
-            <h2>Testimonials</h2>
-            <Slider dots={true} speed={400} arrows={false}>
-              <div>
-                <p>
-                  "We commissioned Joe to refresh our wordmark and he hit it out
-                  of the park. He was very easy to work with along the way,
-                  notifying us of his work schedule and when to expect updates.
-                  He listened to our revision requests and ultimately delivered
-                  a great new identity for our brand. If you are in the market
-                  for a new creative wordmark for your brand, Joe is your man."
-                </p>
-                <span>Scott Anderson, Threadbird</span>
-              </div>
-              <div>
-                <p>
-                  “I enjoyed working with Joe. During the whole time of the
-                  project, he demonstrated a high level of talent, skill,
-                  professionalism and an overall profound understanding of our
-                  brand. I recommend working with him. ”
-                </p>
-                <span>Deniz Caglayan, Lunchio</span>
-              </div>
-              <div>
-                <p>
-                  "Joe's a young designer with a bright future. Approachable,
-                  talented and professional he's got the perfect make up of a
-                  great designer. The identity he created for us was off the
-                  chart and looks awesome. So so happy with his work."
-                </p>
-                <span>Jonathan Munn, Keen</span>
-              </div>
-              <div>
-                <p>
-                  "Joe helped us change Atdaa's logo. He understood the problem
-                  at a glance and came up with many ideas along the way. I was
-                  impressed with his ability to adapt to our never ending
-                  demands and major changes in the design direction."
-                </p>
-                <span>Kaan L Caglar, Atdaa</span>
-              </div>
-            </Slider>
-          </Testimonials>
-        </Columns>
-      </AboutMain>
-      <SocialLinks>
-        <a href="https://twitter.com/JosephSutton">Twitter</a>
-        -
-        <a href="https://www.instagram.com/josephsutton_">Instagram</a>
-        -
-        <a href="https://dribbble.com/JoeSutton">Dribbble</a>
-        -
-        <a href="https://www.facebook.com/joe.sutton.581">Facebook</a>
-        -
-        <a href="https://www.behance.net/JoeSutton">Behance</a>
-      </SocialLinks>
-    </AboutWrapper>
-  </CenterContent>
+  <BlackBorder>
+    <CenterContent>
+      <Helmet title={`${siteTitle} - About`} />
+      <AboutWrapper>
+        <Header>
+          <Link to="/">
+            <img src={xButton} alt="X" />
+            <span>Close</span>
+          </Link>
+          <Link to="/">
+            <img src={logoWhite} alt="Joe Sutton's logo" />
+          </Link>
+        </Header>
+        <AboutMain>
+          <MainCopy>
+            Delivering bold design solutions that balance form and function.
+            Helping to tell your brand's story, and aiding your business reach
+            its goals.
+          </MainCopy>
+          <Columns>
+            <AboutMe>
+              <h2>About Me</h2>
+              <p>
+                I’m a Freelance Designer based near London, who specialises in
+                branding and digital design work. I’ve worked with companies of
+                all sizes, from all across the world. Helping bring their ideas
+                to life or being a part of their brands evolution.
+              </p>
+            </AboutMe>
+            <Services>
+              <h2>Services</h2>
+              <p>
+                Digtial Design, User Interface Design, User Experience Design,
+                Editorial Design, Branding, Lettering, Iconography, Project
+                Management, Strategy.
+              </p>
+              <p>
+                I’ve probably missed some things so get in touch. Even if I
+                can’t provide the service you’re after I know lots of people
+                that can help. I’m more than happy to put a team together, to
+                get the work done under one project, taking the stress away from
+                you finding people you can trust.
+              </p>
+            </Services>
+            <Testimonials>
+              <h2>Testimonials</h2>
+              <Slider dots={true} speed={400} arrows={false}>
+                <div>
+                  <p>
+                    "We commissioned Joe to refresh our wordmark and he hit it
+                    out of the park. He was very easy to work with along the
+                    way, notifying us of his work schedule and when to expect
+                    updates. He listened to our revision requests and ultimately
+                    delivered a great new identity for our brand. If you are in
+                    the market for a new creative wordmark for your brand, Joe
+                    is your man."
+                  </p>
+                  <span>Scott Anderson, Threadbird</span>
+                </div>
+                <div>
+                  <p>
+                    “I enjoyed working with Joe. During the whole time of the
+                    project, he demonstrated a high level of talent, skill,
+                    professionalism and an overall profound understanding of our
+                    brand. I recommend working with him. ”
+                  </p>
+                  <span>Deniz Caglayan, Lunchio</span>
+                </div>
+                <div>
+                  <p>
+                    "Joe's a young designer with a bright future. Approachable,
+                    talented and professional he's got the perfect make up of a
+                    great designer. The identity he created for us was off the
+                    chart and looks awesome. So so happy with his work."
+                  </p>
+                  <span>Jonathan Munn, Keen</span>
+                </div>
+                <div>
+                  <p>
+                    "Joe helped us change Atdaa's logo. He understood the
+                    problem at a glance and came up with many ideas along the
+                    way. I was impressed with his ability to adapt to our never
+                    ending demands and major changes in the design direction."
+                  </p>
+                  <span>Kaan L Caglar, Atdaa</span>
+                </div>
+              </Slider>
+            </Testimonials>
+          </Columns>
+        </AboutMain>
+        <SocialLinks>
+          <a href="https://twitter.com/JosephSutton">Twitter</a>
+          -
+          <a href="https://www.instagram.com/josephsutton_">Instagram</a>
+          -
+          <a href="https://dribbble.com/JoeSutton">Dribbble</a>
+          -
+          <a href="https://www.facebook.com/joe.sutton.581">Facebook</a>
+          -
+          <a href="https://www.behance.net/JoeSutton">Behance</a>
+        </SocialLinks>
+      </AboutWrapper>
+    </CenterContent>
+  </BlackBorder>
 )
+
+const BlackBorder = styled.div`
+  border-top: 5px solid black;
+`
 
 const AboutWrapper = styled.div`
   padding: 0 5rem 5rem 5rem;
