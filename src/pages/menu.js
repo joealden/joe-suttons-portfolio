@@ -64,7 +64,7 @@ const Menu = () => (
 export default Menu
 
 const MenuWrapper = styled.div`
-  position: absolute;
+  position: fixed;
   box-sizing: border-box;
   border-top: 5px solid black;
   height: 100vh;
