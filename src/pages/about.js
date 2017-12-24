@@ -13,16 +13,16 @@ import { siteTitle } from '../constants'
 
 import '../assets/styles/about.css'
 
-const About = () => (
+const About = ({ history }) => (
   <BlackBorder>
     <CenterContent>
       <Helmet title={`${siteTitle} - About`} />
       <AboutWrapper>
         <Header>
-          <Link to="/">
+          <a onClick={() => history.goBack()}>
             <img src={xButton} alt="X" />
             <span>Close</span>
-          </Link>
+          </a>
           <Link to="/">
             <img src={logoWhite} alt="Joe Sutton's logo" />
           </Link>

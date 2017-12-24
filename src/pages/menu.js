@@ -11,7 +11,7 @@ import xButton from '../assets/images/xButton.svg'
 
 import { siteTitle } from '../constants'
 
-const Menu = () => (
+const Menu = ({ history }) => (
   <div>
     <Helmet title={`${siteTitle} - Menu`} />
     <Media query="(max-width: 480px)">
@@ -19,9 +19,9 @@ const Menu = () => (
         matches ? (
           <MenuWrapper>
             <Header>
-              <Link to="/">
+              <a onClick={() => history.goBack()}>
                 <img src={xButton} alt="X" />
-              </Link>
+              </a>
               <Link to="/">
                 <img src={logoWhite} alt="Joe Sutton's logo" />
               </Link>
