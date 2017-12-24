@@ -69,9 +69,6 @@ const MenuWrapper = styled.div`
   border-top: 5px solid black;
   height: 100vh;
   padding: 1.5rem 6vw 0 6vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 `
 
 const Header = styled.div`
@@ -92,6 +89,16 @@ const Header = styled.div`
 `
 
 const Navigation = styled.nav`
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-left: 1.5rem;
+  display: flex;
+  align-items: center;
+
   ul {
     li {
       list-style: none;
