@@ -143,6 +143,7 @@ const Header = styled.header`
     color: white;
     background-color: black;
     font-size: 22px;
+    cursor: pointer;
 
     img {
       height: 1.5rem;
