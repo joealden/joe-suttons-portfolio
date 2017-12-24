@@ -39,7 +39,7 @@ const Menu = () => (
                 </li>
               </ul>
             </Navigation>
-            <div />
+            <Spacer />
             <Footer>
               <a href="https://twitter.com/JosephSutton">Twitter</a>
               -
@@ -69,6 +69,9 @@ const MenuWrapper = styled.div`
   border-top: 5px solid black;
   height: 100vh;
   padding: 1.5rem 6vw 0 6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `
 
 const Header = styled.div`
@@ -89,16 +92,6 @@ const Header = styled.div`
 `
 
 const Navigation = styled.nav`
-  position: absolute;
-  box-sizing: border-box;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  padding-left: 1.5rem;
-  display: flex;
-  align-items: center;
-
   ul {
     li {
       list-style: none;
@@ -121,6 +114,7 @@ const Footer = styled.footer`
   bottom: 1.5rem;
   right: 6vw;
   left: 6vw;
+  height: 1rem;
 
   a {
     margin: 0 0.25rem;
@@ -141,6 +135,10 @@ const Footer = styled.footer`
       font-size: 4vw;
     }
   }
+`
+
+const Spacer = styled.div`
+  height: 2.5rem;
 `
 
 const MenuError = styled.div`
