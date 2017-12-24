@@ -39,6 +39,7 @@ const Menu = () => (
                 </li>
               </ul>
             </Navigation>
+            <div />
             <Footer>
               <a href="https://twitter.com/JosephSutton">Twitter</a>
               -
@@ -64,11 +65,10 @@ const Menu = () => (
 export default Menu
 
 const MenuWrapper = styled.div`
-  position: fixed;
   box-sizing: border-box;
   border-top: 5px solid black;
   height: 100vh;
-  padding: 1.5rem 6vw 1.5rem 6vw;
+  padding: 1.5rem 6vw 0 6vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -110,11 +110,15 @@ const Navigation = styled.nav`
 
 const Footer = styled.footer`
   text-align: center;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 6vw;
+  left: 6vw;
 
   a {
     margin: 0 0.25rem;
     color: #767676;
-    transition: 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out;
 
     &:hover {
       color: white;
@@ -122,6 +126,12 @@ const Footer = styled.footer`
 
     &:first-child {
       margin: 0 0.25rem 0 0;
+    }
+  }
+
+  @media (max-width: 420px) {
+    a {
+      font-size: 4vw;
     }
   }
 `
