@@ -1,13 +1,5 @@
 # TODO
 
-## About Page
-
-* Make it responsive like other pages
-* Move it into a non-page component
-* Render it not as a route
-
-## General
-
 * Implement the stripe like nav follow dot
 * Add page transitions between home and contact
 * Implement the contact functionality somehow
@@ -19,3 +11,4 @@
   * Add CSS image zoom on hover
   * Make the whole component clickable
 * Look into the issue Joe is having with the font
+* Implement the dropdown animations for hamburger menu and about
