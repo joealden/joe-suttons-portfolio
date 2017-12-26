@@ -18,8 +18,22 @@ const Header = () => (
             matches ? (
               <FullNavWrapper>
                 <div id="full-nav">
-                  <Link to="/about">About</Link>
-                  <Link to="/contact">Contact</Link>
+                  <Link
+                    to="/about"
+                    activeStyle={{
+                      color: 'black'
+                    }}
+                  >
+                    About
+                  </Link>
+                  <Link
+                    to="/contact"
+                    activeStyle={{
+                      color: 'black'
+                    }}
+                  >
+                    Contact
+                  </Link>
                 </div>
                 <svg
                   id="circle-svg"
