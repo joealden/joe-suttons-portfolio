@@ -63,7 +63,7 @@ class TemplateWrapper extends React.Component {
 
     function handleNavLeave() {
       circle.style.setProperty('opacity', '0')
-      circle.style.setProperty('transition', 'opacity 0.2s ease-in-out')
+      circle.style.setProperty('transition', 'opacity 0.15s ease-in-out')
     }
 
     function handleLinkEnter() {
@@ -77,7 +77,7 @@ class TemplateWrapper extends React.Component {
 
       // Ensures that this property is set after the transform has complete
       setTimeout(
-        () => circle.style.setProperty('transition', '0.2s ease-in-out'),
+        () => circle.style.setProperty('transition', '0.15s ease-in-out'),
         0
       )
     }
@@ -123,6 +123,11 @@ const FullNavWrapper = styled.div`
   div a {
     vertical-align: middle;
     color: #525252;
+    transition: 0.15s ease-in-out;
+
+    &:hover {
+      color: black;
+    }
   }
 
   div a[href='/about'] {
@@ -134,7 +139,7 @@ const FullNavWrapper = styled.div`
     width: 10px;
     top: 0;
     opacity: 0;
-    transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.15s ease-in-out;
 
     circle {
       stroke-width: 30px;
