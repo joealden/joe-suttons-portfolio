@@ -1,6 +1,5 @@
 # TODO
 
-* Implement the stripe like nav follow dot
 * Add page transitions between home and contact
 * Implement the contact functionality somehow
   * Use graphql-request to graphcool API
