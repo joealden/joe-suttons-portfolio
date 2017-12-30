@@ -2,10 +2,11 @@
 
 ## Doing
 
-* Get input from Jsutts about contact page
+* Get input from JSutts about contact page
   * What should happen when wrong details are entered / none are entered
     * For example, \*required message, color change etc.
   * What should happen when message has been successfully sent?
+* Once feedback has been acted upon, deploy a new version of the API with JSutt's email instead of mine
 
 ## Todo
 
