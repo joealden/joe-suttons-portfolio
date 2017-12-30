@@ -68,36 +68,40 @@ class TemplateWrapper extends React.Component {
     document.body.style.color = 'black'
 
     // For nav
-    const nav = document.querySelector('#full-nav')
-    const links = document.querySelectorAll('#full-nav a')
+    if (document.querySelector('#full-nav')) {
+      const nav = document.querySelector('#full-nav')
+      const links = document.querySelectorAll('#full-nav a')
 
-    const circle = document.querySelector('#circle-svg')
-    const circleCoords = circle.getBoundingClientRect()
-    const circleWidth = circleCoords.width
+      const circle = document.querySelector('#circle-svg')
+      const circleCoords = circle.getBoundingClientRect()
+      const circleWidth = circleCoords.width
 
-    function handleNavLeave() {
-      circle.style.setProperty('opacity', '0')
-      circle.style.setProperty('transition', 'opacity 0.15s ease-in-out')
-    }
+      function handleNavLeave() {
+        circle.style.setProperty('opacity', '0')
+        circle.style.setProperty('transition', 'opacity 0.15s ease-in-out')
+      }
 
-    function handleLinkEnter() {
-      const coords = this.getBoundingClientRect()
-      const left = coords.left + coords.width / 2 - circleWidth / 2
-      const top = coords.bottom + 2
+      function handleLinkEnter() {
+        const coords = this.getBoundingClientRect()
+        const left = coords.left + coords.width / 2 - circleWidth / 2
+        const top = coords.bottom + 2
 
-      circle.style.setProperty('left', `${left}px`)
-      circle.style.setProperty('top', `${top}px`)
-      circle.style.setProperty('opacity', '1')
+        circle.style.setProperty('left', `${left}px`)
+        circle.style.setProperty('top', `${top}px`)
+        circle.style.setProperty('opacity', '1')
 
-      // Ensures that this property is set after the transform has complete
-      setTimeout(
-        () => circle.style.setProperty('transition', '0.15s ease-in-out'),
-        0
+        // Ensures that this property is set after the transform has complete
+        setTimeout(
+          () => circle.style.setProperty('transition', '0.15s ease-in-out'),
+          0
+        )
+      }
+
+      nav.addEventListener('mouseleave', handleNavLeave)
+      links.forEach(link =>
+        link.addEventListener('mouseenter', handleLinkEnter)
       )
     }
-
-    nav.addEventListener('mouseleave', handleNavLeave)
-    links.forEach(link => link.addEventListener('mouseenter', handleLinkEnter))
   }
 
   render() {
