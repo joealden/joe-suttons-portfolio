@@ -1,13 +1,24 @@
-# TODO
+# TODO List
+
+## Doing
+
+* Get input from Jsutts about contact page
+  * What should happen when wrong details are entered / none are entered
+    * For example, \*required message, color change etc.
+  * What should happen when message has been successfully sent?
+
+## Todo
 
 * Add page transitions between home and contact
-* Implement the contact functionality somehow
-  * Use graphql-request to graphcool API
-  * Would allow for keeping record of people
-  * Have a resolver / hook function that uses nodemailer
-  * Send it from something like mailbot@joesutton.co
 * Further work on ProjectItem component
   * Add CSS image zoom on hover
   * Make the whole component clickable
 * Look into the issue Joe is having with the font
 * Implement the dropdown animations for hamburger menu and about
+* Update README with following info:
+  * How to deploy the site
+    * Generate static files
+    * Deploy graphcool API for mail service
+  * How the site is deployed in production
+    * Netlify
+    * graphcool cloud
