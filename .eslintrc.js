@@ -1,3 +1,7 @@
 module.exports = {
-  extends: 'react-app'
+  extends: 'react-app',
+  rules: {
+    // Temp fix for not found definition
+    'jsx-a11y/href-no-hash': 0
+  }
 }
