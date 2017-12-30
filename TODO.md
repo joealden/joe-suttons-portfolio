@@ -9,6 +9,8 @@
 
 ## Todo
 
+* Add an eslint and prettier config to project
+* Add .vscode folder for recommendations + settings
 * Add page transitions between home and contact
 * Further work on ProjectItem component
   * Add CSS image zoom on hover
