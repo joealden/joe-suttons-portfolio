@@ -6,12 +6,11 @@
   * What should happen when wrong details are entered / none are entered
     * For example, \*required message, color change etc.
   * What should happen when message has been successfully sent?
-* Once feedback has been acted upon, deploy a new version of the API with JSutt's email instead of mine
-* Look into issue with emails not be recieved (Possibly need to switch provider (maybe non free))
+* Look into issue with emails not be recieved (Possibly need to switch provider
+  (maybe non free))
 
 ## Todo
 
-* Add an eslint and prettier config to project
 * Add .vscode folder for recommendations + settings
 * Add page transitions between home and contact
 * Further work on ProjectItem component

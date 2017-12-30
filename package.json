@@ -14,12 +14,23 @@
     "dev": "yarn develop"
   },
   "dependencies": {
+    "babel-eslint": "^8.1.2",
+    "caniuse-db": "^1.0.30000784",
+    "eslint": "^4.14.0",
+    "eslint-config-react-app": "^2.0.1",
+    "eslint-plugin-flowtype": "^2.40.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1",
     "gatsby": "^1.9.127",
     "gatsby-link": "^1.6.30",
     "gatsby-plugin-netlify": "^1.0.11",
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-plugin-styled-components": "^2.0.4",
     "graphql-request": "^1.4.1",
+    "jquery": "^3.2.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "react-media": "^1.6.1",
     "react-slick": "^0.16.0",
     "styled-components": "^2.2.4"
