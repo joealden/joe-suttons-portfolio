@@ -8,6 +8,22 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `red`
+      }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Joe Sutton's Creative Portfolio`,
+        short_name: `Joe's Portfolio`,
+        start_url: '/',
+        background_color: '#000000',
+        theme_color: '#000000'
+      }
+    },
     `gatsby-plugin-netlify`
   ]
 }
