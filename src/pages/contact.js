@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
+import { request } from 'graphql-request'
 
 import CenterContent from '../components/CenterContent'
 import sendButton from '../assets/images/sendButton.svg'
@@ -31,34 +32,92 @@ const Contact = () => (
   </CenterContent>
 )
 
-const ContactForm = () => (
-  <Form>
-    <label>
-      <span>Name</span>
-      <input type="text" id="name" />
-    </label>
-    <label>
-      <span>Email Address</span>
-      <input type="email" id="email" />
-    </label>
-    <label>
-      <span>Subject</span>
-      <input type="text" id="subject" />
-    </label>
-    <label>
-      <span>Message</span>
-      <textarea
-        name="message"
-        id="message"
-        placeholder="Let me know all the details as well as timeline and budget..."
-      />
-    </label>
-    <button>
-      <span>Send</span>
-      <img src={sendButton} alt=">" />
-    </button>
-  </Form>
-)
+class ContactForm extends React.Component {
+  state = {
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  }
+
+  sendEmail = event => {
+    // Prevent form from actually submitting
+    event.preventDefault()
+
+    // Send the GraphQL mutation to the graphcool API
+    const endpoint =
+      'https://api.graph.cool/simple/v1/cjbshtynj285v01109ylyznp8'
+
+    const query = `mutation {
+      createMessage(
+        name: "${this.state.name}",
+        email: "${this.state.email}",
+        subject: "${this.state.subject}",
+        message: "${this.state.message}"
+      ) {
+        id
+      }
+    }`
+
+    request(endpoint, query)
+
+    // Reset contact form fields
+    this.setState({
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    })
+  }
+
+  render() {
+    return (
+      <Form onSubmit={this.sendEmail}>
+        <label>
+          <span>Name</span>
+          <input
+            type="text"
+            id="name"
+            value={this.state.name}
+            onChange={event => this.setState({ name: event.target.value })}
+          />
+        </label>
+        <label>
+          <span>Email Address</span>
+          <input
+            type="email"
+            id="email"
+            value={this.state.email}
+            onChange={event => this.setState({ email: event.target.value })}
+          />
+        </label>
+        <label>
+          <span>Subject</span>
+          <input
+            type="text"
+            id="subject"
+            value={this.state.subject}
+            onChange={event => this.setState({ subject: event.target.value })}
+          />
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Let me know all the details as well as timeline and budget..."
+            value={this.state.message}
+            onChange={event => this.setState({ message: event.target.value })}
+          />
+        </label>
+        <button>
+          <span>Send</span>
+          <img src={sendButton} alt=">" />
+        </button>
+      </Form>
+    )
+  }
+}
 
 const ContactWrapper = styled.div`
   margin: 10rem 5rem 5rem 5rem;
