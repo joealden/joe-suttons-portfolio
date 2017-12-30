@@ -44,30 +44,40 @@ class ContactForm extends React.Component {
     // Prevent form from actually submitting
     event.preventDefault()
 
-    // Send the GraphQL mutation to the graphcool API
-    const endpoint =
-      'https://api.graph.cool/simple/v1/cjbshtynj285v01109ylyznp8'
+    // Fetch current page state
+    const { name, email, subject, message } = this.state
 
-    const query = `mutation {
-      createMessage(
-        name: "${this.state.name}",
-        email: "${this.state.email}",
-        subject: "${this.state.subject}",
-        message: "${this.state.message}"
-      ) {
-        id
-      }
-    }`
+    // Only execute query if all fields have data in
+    if (name !== '' && email !== '' && subject !== '' && message !== '') {
+      // Fill the mutation with current state data
+      const mutation = `mutation {
+        createMessage(
+          name: "${name}",
+          email: "${email}",
+          subject: "${subject}",
+          message: "${message}"
+        ) {
+          id
+        }
+      }`
 
-    request(endpoint, query)
+      // Send the GraphQL mutation to the graphcool API
+      request(
+        'https://api.graph.cool/simple/v1/cjbshtynj285v01109ylyznp8',
+        mutation
+      )
 
-    // Reset contact form fields
-    this.setState({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    })
+      // Reset contact form fields
+      this.setState({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      })
+    } else {
+      // What happens when not all data has been entered (placeholder)
+      console.log('Not all fields were supplied, sending failed.')
+    }
   }
 
   render() {
