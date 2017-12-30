@@ -7,6 +7,7 @@
     * For example, \*required message, color change etc.
   * What should happen when message has been successfully sent?
 * Once feedback has been acted upon, deploy a new version of the API with JSutt's email instead of mine
+* Look into issue with emails not be recieved (Possibly need to switch provider (maybe non free))
 
 ## Todo
 
