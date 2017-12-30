@@ -1,8 +1,7 @@
 {
   "name": "joe-suttons-portfolio-mailer",
-  "version": "0.1.0",
-  "private": true,
   "description": "The API used on the contact page of Joe Sutton's portfolio.",
+  "private": true,
   "scripts": {
     "deploy": "gcf deploy",
     "pg": "gcf playground"
