@@ -1,0 +1,14 @@
+{
+  "name": "joe-suttons-portfolio-mailer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The API used on the contact page of Joe Sutton's portfolio.",
+  "scripts": {
+    "deploy": "gcf deploy",
+    "pg": "gcf playground"
+  },
+  "dependencies": {
+    "graphcool": "^0.11.4",
+    "nodemailer": "^4.4.1"
+  }
+}

@@ -1,0 +1,12 @@
+types: ./types.graphql
+
+functions:
+  sendEmail:
+    type: operationBefore
+    operation: Message.create
+    handler:
+      code:
+        src: src/sendEmail.js
+
+permissions:
+  - operation: Message.create
