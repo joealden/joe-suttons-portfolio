@@ -49,22 +49,35 @@ class ContactForm extends React.Component {
 
     // Only execute query if all fields have data in
     if (name !== '' && email !== '' && subject !== '' && message !== '') {
-      // Fill the mutation with current state data
-      const mutation = `mutation {
+      const mutation = `mutation createMessage(
+        $name: String!,
+        $email: String!,
+        $subject: String!,
+        $message: String!
+      ) {
         createMessage(
-          name: "${name}",
-          email: "${email}",
-          subject: "${subject}",
-          message: "${message}"
+          name: $name,
+          email: $email,
+          subject: $subject,
+          message: $message
         ) {
           id
         }
       }`
 
+      // Trim data to be used in mutation
+      const variables = {
+        name: name.trim(),
+        email: email.trim(),
+        subject: subject.trim(),
+        message: message.trim()
+      }
+
       // Send the GraphQL mutation to the graphcool API
       request(
         'https://api.graph.cool/simple/v1/cjbshtynj285v01109ylyznp8',
-        mutation
+        mutation,
+        variables
       )
 
       // Reset contact form fields
