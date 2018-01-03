@@ -9,76 +9,17 @@ import logoBlack from '../assets/images/logo-black.svg'
 
 import '../assets/styles/index.css'
 
-const Header = () => (
-  <CenterContent>
-    <HeaderWrapper>
-      <Navigation>
-        <Media query="(min-width: 480px)">
-          {matches =>
-            matches ? (
-              <FullNavWrapper>
-                <div id="full-nav">
-                  <Link
-                    to="/about"
-                    activeStyle={{
-                      color: 'black'
-                    }}
-                  >
-                    About
-                  </Link>
-                  <Link
-                    to="/contact"
-                    activeStyle={{
-                      color: 'black'
-                    }}
-                  >
-                    Contact
-                  </Link>
-                </div>
-                <svg
-                  id="circle-svg"
-                  viewBox="0 0 200 200"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="100"
-                    cy="100"
-                    r="80"
-                    fill="white"
-                    stroke="black"
-                  />
-                </svg>
-              </FullNavWrapper>
-            ) : (
-              <HamburgerIcon />
-            )
-          }
-        </Media>
-      </Navigation>
-      <Link to="/">
-        <LogoWrapper src={logoBlack} alt="Joe Sutton's logo" />
-      </Link>
-    </HeaderWrapper>
-  </CenterContent>
-)
-
-class TemplateWrapper extends React.Component {
+class Header extends React.Component {
   componentDidMount() {
-    document.body.style.backgroundColor = 'white'
-    document.body.style.color = 'black'
+    if (this.nav) {
+      const { nav, navCircle } = this
 
-    // For nav
-    if (document.querySelector('#full-nav')) {
-      const nav = document.querySelector('#full-nav')
-      const links = document.querySelectorAll('#full-nav a')
-
-      const circle = document.querySelector('#circle-svg')
-      const circleCoords = circle.getBoundingClientRect()
+      const circleCoords = navCircle.getBoundingClientRect()
       const circleWidth = circleCoords.width
 
       function handleNavLeave() {
-        circle.style.setProperty('opacity', '0')
-        circle.style.setProperty('transition', 'opacity 0.15s ease-in-out')
+        navCircle.style.setProperty('opacity', '0')
+        navCircle.style.setProperty('transition', 'opacity 0.15s ease-in-out')
       }
 
       function handleLinkEnter() {
@@ -86,22 +27,86 @@ class TemplateWrapper extends React.Component {
         const left = coords.left + coords.width / 2 - circleWidth / 2
         const top = coords.bottom + 2
 
-        circle.style.setProperty('left', `${left}px`)
-        circle.style.setProperty('top', `${top}px`)
-        circle.style.setProperty('opacity', '1')
+        navCircle.style.setProperty('left', `${left}px`)
+        navCircle.style.setProperty('top', `${top}px`)
+        navCircle.style.setProperty('opacity', '1')
 
         // Ensures that this property is set after the transform has complete
         setTimeout(
-          () => circle.style.setProperty('transition', '0.15s ease-in-out'),
+          () => navCircle.style.setProperty('transition', '0.15s ease-in-out'),
           0
         )
       }
 
       nav.addEventListener('mouseleave', handleNavLeave)
-      links.forEach(link =>
+
+      for (let link of nav.children) {
         link.addEventListener('mouseenter', handleLinkEnter)
-      )
+      }
     }
+  }
+
+  render() {
+    return (
+      <CenterContent>
+        <HeaderWrapper>
+          <Navigation>
+            <Media query="(min-width: 480px)">
+              {matches =>
+                matches ? (
+                  <FullNavWrapper>
+                    <div ref={node => (this.nav = node)}>
+                      <Link
+                        to="/about"
+                        activeStyle={{
+                          color: 'black'
+                        }}
+                      >
+                        About
+                      </Link>
+                      <Link
+                        to="/contact"
+                        activeStyle={{
+                          color: 'black'
+                        }}
+                      >
+                        Contact
+                      </Link>
+                    </div>
+                    <svg
+                      ref={node => (this.navCircle = node)}
+                      id="circle-svg"
+                      viewBox="0 0 200 200"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="100"
+                        cy="100"
+                        r="80"
+                        fill="white"
+                        stroke="black"
+                      />
+                    </svg>
+                  </FullNavWrapper>
+                ) : (
+                  <HamburgerIcon />
+                )
+              }
+            </Media>
+          </Navigation>
+          <Link to="/">
+            <LogoWrapper src={logoBlack} alt="Joe Sutton's logo" />
+          </Link>
+        </HeaderWrapper>
+      </CenterContent>
+    )
+  }
+}
+
+class TemplateWrapper extends React.Component {
+  componentDidMount() {
+    document.body.style.backgroundColor = 'white'
+    document.body.style.color = 'black'
   }
 
   render() {
