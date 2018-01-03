@@ -13,10 +13,20 @@ const ProjectItem = ({ src, alt, title, info }) => (
 
 const ImageWrapper = styled.div`
   position: relative;
+  overflow: hidden;
+  height: 100%;
+
+  &:hover {
+    img {
+      transform: scale(1.15);
+    }
+  }
 `
 
 const Img = styled.img`
   width: 100%;
+  height: 100%;
+  transition: 0.3s ease-in-out;
 `
 
 const Details = styled.div`
@@ -24,6 +34,9 @@ const Details = styled.div`
   bottom: 50px;
   left: 50px;
   color: white;
+
+  /* Ensure details are on top of image */
+  z-index: 10;
 
   h4 {
     font-size: 30px;
