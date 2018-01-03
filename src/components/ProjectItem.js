@@ -25,7 +25,7 @@ const ImageWrapper = styled.div`
 
   &:hover {
     img {
-      transform: scale(1.15);
+      transform: scale(1.075);
     }
   }
 `
