@@ -153,6 +153,13 @@ const Header = styled.header`
       font-size: 22px;
       margin-left: 0.75rem;
     }
+
+    &:hover {
+      img {
+        transition: 0.25s ease-in-out;
+        transform: rotate(0.25turn);
+      }
+    }
   }
 `
 
