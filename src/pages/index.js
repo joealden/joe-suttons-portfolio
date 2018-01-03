@@ -31,24 +31,28 @@ const Home = () => (
           </ProjectsTitle>
           <ImageGrid>
             <ProjectItem
+              link="umoro"
               src={umoroImage}
               alt="Man in a hooded coat with a hat on"
               title="Umoro"
               info="A Random Snippet of info on the Work"
             />
             <ProjectItem
+              link="stab-mag"
               src={stabImage}
               alt="A beach with surfers"
               title="Stab Mag"
               info="A Random Snippet of info on the Work"
             />
             <ProjectItem
+              link="counted"
               src={countedImage}
               alt="A salad on a plate with a fork"
               title="Counted"
               info="A Random Snippet of info on the Work"
             />
             <ProjectItem
+              link="logos-and-lettering"
               src={letteringImage}
               alt="A dark background"
               title="Logos and Lettering"

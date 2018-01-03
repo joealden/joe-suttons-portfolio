@@ -1,14 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
+import Link from 'gatsby-link'
 
-const ProjectItem = ({ src, alt, title, info }) => (
-  <ImageWrapper>
-    <Details>
-      <h4>{title}</h4>
-      <span>{info}</span>
-    </Details>
-    <Img src={src} alt={alt} />
-  </ImageWrapper>
+const ProjectItem = ({ link, src, alt, title, info }) => (
+  <Link to={`/work/${link}`}>
+    <ImageWrapper>
+      <Details>
+        <h4>{title}</h4>
+        <span>{info}</span>
+      </Details>
+      <Img src={src} alt={alt} />
+    </ImageWrapper>
+  </Link>
 )
 
 const ImageWrapper = styled.div`
