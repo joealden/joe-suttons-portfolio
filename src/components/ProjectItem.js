@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Link from 'gatsby-link'
 
 const ProjectItem = ({ link, src, alt, title, info }) => (
-  <Link to={`/work/${link}`}>
+  <StyledLink to={`/work/${link}`}>
     <ImageWrapper>
       <Details>
         <h4>{title}</h4>
@@ -11,8 +11,12 @@ const ProjectItem = ({ link, src, alt, title, info }) => (
       </Details>
       <Img src={src} alt={alt} />
     </ImageWrapper>
-  </Link>
+  </StyledLink>
 )
+
+const StyledLink = styled(Link)`
+  height: 100%;
+`
 
 const ImageWrapper = styled.div`
   position: relative;
