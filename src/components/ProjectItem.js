@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
+import PropTypes from 'prop-types'
 
 const ProjectItem = ({ link, src, alt, title, info }) => (
   <StyledLink to={`/work/${link}`}>
@@ -13,6 +14,14 @@ const ProjectItem = ({ link, src, alt, title, info }) => (
     </ImageWrapper>
   </StyledLink>
 )
+
+ProjectItem.propTypes = {
+  link: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  info: PropTypes.string.isRequired
+}
 
 const StyledLink = styled(Link)`
   height: 100%;

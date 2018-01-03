@@ -23,6 +23,7 @@
     "gatsby-plugin-styled-components": "^2.0.4",
     "graphql-request": "^1.4.1",
     "jquery": "^3.2.1",
+    "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-media": "^1.6.1",
