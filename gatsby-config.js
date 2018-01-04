@@ -5,15 +5,18 @@ module.exports = {
     description: `The creative portfolio of Joe Sutton`,
     siteUrl: 'https://joesutton.co'
   },
+
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
         color: `red`
       }
     },
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -24,6 +27,7 @@ module.exports = {
         theme_color: '#000000'
       }
     },
+
     `gatsby-plugin-netlify`
   ]
 }
