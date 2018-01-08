@@ -3,26 +3,6 @@ import styled from 'styled-components'
 import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
 
-const ProjectItem = ({ link, src, alt, title, info }) => (
-  <StyledLink to={`/work/${link}`}>
-    <ImageWrapper>
-      <Details>
-        <h4>{title}</h4>
-        <span>{info}</span>
-      </Details>
-      <Img src={src} alt={alt} />
-    </ImageWrapper>
-  </StyledLink>
-)
-
-ProjectItem.propTypes = {
-  link: PropTypes.string.isRequired,
-  src: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  info: PropTypes.string.isRequired
-}
-
 const StyledLink = styled(Link)`
   height: 100%;
 `
@@ -50,8 +30,6 @@ const Details = styled.div`
   bottom: 50px;
   left: 50px;
   color: white;
-
-  /* Ensure details are on top of image */
   z-index: 10;
 
   h4 {
@@ -114,5 +92,31 @@ const Details = styled.div`
     }
   }
 `
+
+class ProjectItem extends React.Component {
+  static propTypes = {
+    link: PropTypes.string.isRequired,
+    src: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    info: PropTypes.string.isRequired
+  }
+
+  render() {
+    const { link, src, alt, title, info } = this.props
+
+    return (
+      <StyledLink to={`/work/${link}`}>
+        <ImageWrapper>
+          <Details>
+            <h4>{title}</h4>
+            <span>{info}</span>
+          </Details>
+          <Img src={src} alt={alt} />
+        </ImageWrapper>
+      </StyledLink>
+    )
+  }
+}
 
 export default ProjectItem

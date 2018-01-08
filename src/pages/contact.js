@@ -5,32 +5,71 @@ import { request } from 'graphql-request'
 
 import CenterContent from '../components/CenterContent'
 import sendButton from '../assets/images/sendButton.svg'
-
 import { siteTitle } from '../constants'
 
-const Contact = () => (
-  <CenterContent>
-    <Helmet title={`${siteTitle} - Contact`} />
-    <ContactWrapper>
-      <Info>
-        <h1>Contact</h1>
-        <ParagraphGrid>
-          <FirstParagraph>
-            If you're contacting me about work, then it'd be great if you could
-            include the details of the project, budget, deadline etc. to help
-            speed up the process. Also feel free to get in touch if you have any
-            questions.
-          </FirstParagraph>
-          <SecondParagraph>
-            If you would rather not use the form, you can email me directly:
-            &nbsp; <a href="mailto:hi@joesutton.co">hi@joesutton.co</a>
-          </SecondParagraph>
-        </ParagraphGrid>
-      </Info>
-      <ContactForm />
-    </ContactWrapper>
-  </CenterContent>
-)
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.25rem;
+
+    span {
+      font-size: 22px;
+      margin-bottom: 0.75rem;
+    }
+
+    /* Remove top margin on name field */
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  input,
+  textarea {
+    border: 2px solid #eaeaea;
+    padding: 1rem;
+    outline: none;
+    transition: 0.15s ease-in-out;
+    -webkit-appearance: none;
+    border-radius: 0;
+
+    &:focus {
+      border: 2px solid #707070;
+    }
+  }
+
+  textarea {
+    resize: none;
+    height: 12rem;
+  }
+
+  button {
+    text-align: right;
+    margin-top: 1rem;
+    font-size: 30px;
+
+    span {
+      font-size: 30px;
+      display: inline-block;
+      transition: 0.15s ease-in-out;
+    }
+
+    img {
+      height: 1rem;
+      margin-left: 0.5rem;
+    }
+
+    &:hover,
+    &:focus {
+      span {
+        transform: translateX(-0.5rem);
+      }
+    }
+  }
+`
 
 class ContactForm extends React.Component {
   state = {
@@ -38,6 +77,54 @@ class ContactForm extends React.Component {
     email: '',
     subject: '',
     message: ''
+  }
+
+  render() {
+    return (
+      <Form onSubmit={this.sendEmail}>
+        <label>
+          <span>Name</span>
+          <input
+            type="text"
+            id="name"
+            value={this.state.name}
+            onChange={event => this.setState({ name: event.target.value })}
+          />
+        </label>
+        <label>
+          <span>Email Address</span>
+          <input
+            type="email"
+            id="email"
+            value={this.state.email}
+            onChange={event => this.setState({ email: event.target.value })}
+          />
+        </label>
+        <label>
+          <span>Subject</span>
+          <input
+            type="text"
+            id="subject"
+            value={this.state.subject}
+            onChange={event => this.setState({ subject: event.target.value })}
+          />
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Let me know all the details as well as timeline and budget..."
+            value={this.state.message}
+            onChange={event => this.setState({ message: event.target.value })}
+          />
+        </label>
+        <button>
+          <span>Send</span>
+          <img src={sendButton} alt=">" />
+        </button>
+      </Form>
+    )
   }
 
   sendEmail = event => {
@@ -91,54 +178,6 @@ class ContactForm extends React.Component {
       // What happens when not all data has been entered (placeholder)
       console.log('Not all fields were supplied, sending failed.')
     }
-  }
-
-  render() {
-    return (
-      <Form onSubmit={this.sendEmail}>
-        <label>
-          <span>Name</span>
-          <input
-            type="text"
-            id="name"
-            value={this.state.name}
-            onChange={event => this.setState({ name: event.target.value })}
-          />
-        </label>
-        <label>
-          <span>Email Address</span>
-          <input
-            type="email"
-            id="email"
-            value={this.state.email}
-            onChange={event => this.setState({ email: event.target.value })}
-          />
-        </label>
-        <label>
-          <span>Subject</span>
-          <input
-            type="text"
-            id="subject"
-            value={this.state.subject}
-            onChange={event => this.setState({ subject: event.target.value })}
-          />
-        </label>
-        <label>
-          <span>Message</span>
-          <textarea
-            name="message"
-            id="message"
-            placeholder="Let me know all the details as well as timeline and budget..."
-            value={this.state.message}
-            onChange={event => this.setState({ message: event.target.value })}
-          />
-        </label>
-        <button>
-          <span>Send</span>
-          <img src={sendButton} alt=">" />
-        </button>
-      </Form>
-    )
   }
 }
 
@@ -232,68 +271,32 @@ const SecondParagraph = styled.p`
   }
 `
 
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-
-  label {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1.25rem;
-
-    span {
-      font-size: 22px;
-      margin-bottom: 0.75rem;
-    }
-
-    /* Remove top margin on name field */
-    &:first-child {
-      margin-top: 0;
-    }
+class Contact extends React.Component {
+  render() {
+    return (
+      <CenterContent>
+        <Helmet title={`${siteTitle} - Contact`} />
+        <ContactWrapper>
+          <Info>
+            <h1>Contact</h1>
+            <ParagraphGrid>
+              <FirstParagraph>
+                If you're contacting me about work, then it'd be great if you
+                could include the details of the project, budget, deadline etc.
+                to help speed up the process. Also feel free to get in touch if
+                you have any questions.
+              </FirstParagraph>
+              <SecondParagraph>
+                If you would rather not use the form, you can email me directly:
+                &nbsp; <a href="mailto:hi@joesutton.co">hi@joesutton.co</a>
+              </SecondParagraph>
+            </ParagraphGrid>
+          </Info>
+          <ContactForm />
+        </ContactWrapper>
+      </CenterContent>
+    )
   }
-
-  input,
-  textarea {
-    border: 2px solid #eaeaea;
-    padding: 1rem;
-    outline: none;
-    transition: 0.15s ease-in-out;
-    -webkit-appearance: none;
-    border-radius: 0;
-
-    &:focus {
-      border: 2px solid #707070;
-    }
-  }
-
-  textarea {
-    resize: none;
-    height: 12rem;
-  }
-
-  button {
-    text-align: right;
-    margin-top: 1rem;
-    font-size: 30px;
-
-    span {
-      font-size: 30px;
-      display: inline-block;
-      transition: 0.15s ease-in-out;
-    }
-
-    img {
-      height: 1rem;
-      margin-left: 0.5rem;
-    }
-
-    &:hover,
-    &:focus {
-      span {
-        transform: translateX(-0.5rem);
-      }
-    }
-  }
-`
+}
 
 export default Contact

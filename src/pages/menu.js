@@ -4,65 +4,9 @@ import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import Media from 'react-media'
 
-import CenterContent from '../components/CenterContent'
-
 import logoWhite from '../assets/images/logo-white.svg'
 import xButton from '../assets/images/xButton.svg'
-
 import { siteTitle } from '../constants'
-
-const Menu = ({ history }) => (
-  <div>
-    <Helmet title={`${siteTitle} - Menu`} />
-    <Media query="(max-width: 480px)">
-      {matches =>
-        matches ? (
-          <MenuWrapper>
-            <Header>
-              <a onClick={() => history.goBack()}>
-                <img src={xButton} alt="X" />
-              </a>
-              <Link to="/">
-                <img src={logoWhite} alt="Joe Sutton's logo" />
-              </Link>
-            </Header>
-            <Navigation>
-              <ul>
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="/about">About</Link>
-                </li>
-                <li>
-                  <Link to="/contact">Contact</Link>
-                </li>
-              </ul>
-            </Navigation>
-            <Spacer />
-            <Footer>
-              <a href="https://twitter.com/JosephSutton">Twitter</a>
-              -
-              <a href="https://www.instagram.com/josephsutton_">Instagram</a>
-              -
-              <a href="https://dribbble.com/JoeSutton">Dribbble</a>
-              -
-              <a href="https://www.facebook.com/joe.sutton.581">Facebook</a>
-              -
-              <a href="https://www.behance.net/JoeSutton">Behance</a>
-            </Footer>
-          </MenuWrapper>
-        ) : (
-          <MenuError>
-            Sorry, your screen is too big to display the mobile menu.
-          </MenuError>
-        )
-      }
-    </Media>
-  </div>
-)
-
-export default Menu
 
 const MenuWrapper = styled.div`
   box-sizing: border-box;
@@ -152,3 +96,64 @@ const MenuError = styled.div`
   font-size: 50px;
   padding: 5rem;
 `
+
+class Menu extends React.Component {
+  render() {
+    const { history } = this.props
+
+    return (
+      <div>
+        <Helmet title={`${siteTitle} - Menu`} />
+        <Media query="(max-width: 480px)">
+          {matches =>
+            matches ? (
+              <MenuWrapper>
+                <Header>
+                  <a onClick={() => history.goBack()}>
+                    <img src={xButton} alt="X" />
+                  </a>
+                  <Link to="/">
+                    <img src={logoWhite} alt="Joe Sutton's logo" />
+                  </Link>
+                </Header>
+                <Navigation>
+                  <ul>
+                    <li>
+                      <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                      <Link to="/about">About</Link>
+                    </li>
+                    <li>
+                      <Link to="/contact">Contact</Link>
+                    </li>
+                  </ul>
+                </Navigation>
+                <Spacer />
+                <Footer>
+                  <a href="https://twitter.com/JosephSutton">Twitter</a>
+                  -
+                  <a href="https://www.instagram.com/josephsutton_">
+                    Instagram
+                  </a>
+                  -
+                  <a href="https://dribbble.com/JoeSutton">Dribbble</a>
+                  -
+                  <a href="https://www.facebook.com/joe.sutton.581">Facebook</a>
+                  -
+                  <a href="https://www.behance.net/JoeSutton">Behance</a>
+                </Footer>
+              </MenuWrapper>
+            ) : (
+              <MenuError>
+                Sorry, your screen is too big to display the mobile menu.
+              </MenuError>
+            )
+          }
+        </Media>
+      </div>
+    )
+  }
+}
+
+export default Menu

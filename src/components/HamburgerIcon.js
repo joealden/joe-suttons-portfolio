@@ -2,18 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 
-const HamburgerIcon = () => (
-  <Link to="/menu">
-    <Hamburger>
-      <span />
-      <span />
-      <span />
-    </Hamburger>
-  </Link>
-)
-
-export default HamburgerIcon
-
 const Hamburger = styled.div`
   width: 25px;
   height: 27px;
@@ -46,19 +34,18 @@ const Hamburger = styled.div`
   }
 `
 
-/*
+class HamburgerIcon extends React.Component {
+  render() {
+    return (
+      <Link to="/menu">
+        <Hamburger>
+          <span />
+          <span />
+          <span />
+        </Hamburger>
+      </Link>
+    )
+  }
+}
 
-#hamburger.open span
-  &:nth-child(1)
-    transform rotate(45deg)
-    top 0px
-    left 10px
-  &:nth-child(2)
-    width 0%
-    opacity 0
-  &:nth-child(3)
-    transform rotate(-45deg)
-    top 29px
-    left 10px
-
-*/
+export default HamburgerIcon

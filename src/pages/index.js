@@ -6,84 +6,11 @@ import Media from 'react-media'
 
 import CenterContent from '../components/CenterContent'
 import ProjectItem from '../components/ProjectItem'
-
 import umoroImage from '../assets/images/umoro.jpg'
 import stabImage from '../assets/images/stab-mag.jpg'
 import countedImage from '../assets/images/counted.jpg'
 import letteringImage from '../assets/images/logos-lettering.jpg'
-
 import { siteTitle } from '../constants'
-
-const scrollToTop = () => window.scrollTo(0, 0)
-
-const Home = () => (
-  <div>
-    <Helmet title={`${siteTitle} - Home`} />
-    <CenterContent>
-      <TitleAndProjects>
-        <Title>
-          <h3>Joe Sutton</h3>
-          <h1>Freelance Digital and Brand Designer</h1>
-        </Title>
-        <Projects>
-          <ProjectsTitle>
-            <h2>Projects</h2>
-          </ProjectsTitle>
-          <ImageGrid>
-            <ProjectItem
-              link="umoro"
-              src={umoroImage}
-              alt="Man in a hooded coat with a hat on"
-              title="Umoro"
-              info="A Random Snippet of info on the Work"
-            />
-            <ProjectItem
-              link="stab-mag"
-              src={stabImage}
-              alt="A beach with surfers"
-              title="Stab Mag"
-              info="A Random Snippet of info on the Work"
-            />
-            <ProjectItem
-              link="counted"
-              src={countedImage}
-              alt="A salad on a plate with a fork"
-              title="Counted"
-              info="A Random Snippet of info on the Work"
-            />
-            <ProjectItem
-              link="logos-and-lettering"
-              src={letteringImage}
-              alt="A dark background"
-              title="Logos and Lettering"
-              info="A Random Snippet of info on the Work"
-            />
-          </ImageGrid>
-        </Projects>
-      </TitleAndProjects>
-    </CenterContent>
-    <Contact>
-      Have a project in mind, or just a question?
-      <Link to="/contact">Get in Touch</Link>
-    </Contact>
-    <CenterContent>
-      <Media query="(min-width: 1200px)">
-        {matches =>
-          matches ? (
-            <Footer>
-              <span>Joe Sutton - Freelance Digital and Brand Designer</span>
-              <button onClick={scrollToTop}>Back to Top</button>
-            </Footer>
-          ) : (
-            <Footer>
-              <span>Joe Sutton - Freelance Digital and Brand Designer</span>
-            </Footer>
-          )
-        }
-      </Media>
-    </CenterContent>
-  </div>
-)
 
 const TitleAndProjects = styled.div`
   max-width: 1800px;
@@ -237,5 +164,80 @@ const Footer = styled.footer`
     }
   }
 `
+
+class Home extends React.Component {
+  render() {
+    return (
+      <div>
+        <Helmet title={`${siteTitle} - Home`} />
+        <CenterContent>
+          <TitleAndProjects>
+            <Title>
+              <h3>Joe Sutton</h3>
+              <h1>Freelance Digital and Brand Designer</h1>
+            </Title>
+            <Projects>
+              <ProjectsTitle>
+                <h2>Projects</h2>
+              </ProjectsTitle>
+              <ImageGrid>
+                <ProjectItem
+                  link="umoro"
+                  src={umoroImage}
+                  alt="Man in a hooded coat with a hat on"
+                  title="Umoro"
+                  info="A Random Snippet of info on the Work"
+                />
+                <ProjectItem
+                  link="stab-mag"
+                  src={stabImage}
+                  alt="A beach with surfers"
+                  title="Stab Mag"
+                  info="A Random Snippet of info on the Work"
+                />
+                <ProjectItem
+                  link="counted"
+                  src={countedImage}
+                  alt="A salad on a plate with a fork"
+                  title="Counted"
+                  info="A Random Snippet of info on the Work"
+                />
+                <ProjectItem
+                  link="logos-and-lettering"
+                  src={letteringImage}
+                  alt="A dark background"
+                  title="Logos and Lettering"
+                  info="A Random Snippet of info on the Work"
+                />
+              </ImageGrid>
+            </Projects>
+          </TitleAndProjects>
+        </CenterContent>
+        <Contact>
+          Have a project in mind, or just a question?
+          <Link to="/contact">Get in Touch</Link>
+        </Contact>
+        <CenterContent>
+          <Media query="(min-width: 1200px)">
+            {matches =>
+              matches ? (
+                <Footer>
+                  <span>Joe Sutton - Freelance Digital and Brand Designer</span>
+                  <button onClick={this.scrollToTop}>Back to Top</button>
+                </Footer>
+              ) : (
+                <Footer>
+                  <span>Joe Sutton - Freelance Digital and Brand Designer</span>
+                </Footer>
+              )
+            }
+          </Media>
+        </CenterContent>
+      </div>
+    )
+  }
+
+  scrollToTop = () => window.scrollTo(0, 0)
+}
 
 export default Home
