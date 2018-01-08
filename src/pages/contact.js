@@ -128,7 +128,7 @@ class ContactForm extends React.Component {
   }
 
   sendEmail = event => {
-    // Prevent form from actually submitting
+    // Prevent form from executing default submit action
     event.preventDefault()
 
     // Fetch current page state
