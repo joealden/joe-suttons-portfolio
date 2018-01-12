@@ -40,16 +40,14 @@ const Header = styled.header`
       height: 1.5rem;
     }
 
+    #close:hover {
+      transition: 0.25s ease-in-out;
+      transform: rotate(0.25turn);
+    }
+
     span {
       font-size: 22px;
       margin-left: 0.75rem;
-    }
-
-    &:hover {
-      img {
-        transition: 0.25s ease-in-out;
-        transform: rotate(0.25turn);
-      }
     }
   }
 `
@@ -187,7 +185,7 @@ class About extends React.Component {
           <AboutWrapper>
             <Header>
               <a onClick={() => history.goBack()}>
-                <img src={xButton} alt="X" />
+                <img src={xButton} alt="X" id="close" />
                 <span>Close</span>
               </a>
               <Link to="/">
