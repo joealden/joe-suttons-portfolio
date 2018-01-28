@@ -14,10 +14,10 @@
     "dev": "yarn develop"
   },
   "dependencies": {
-    "gatsby": "1.9.166",
-    "gatsby-link": "1.6.34",
+    "gatsby": "1.9.172",
+    "gatsby-link": "1.6.35",
     "gatsby-plugin-manifest": "1.0.13",
-    "gatsby-plugin-netlify": "1.0.15",
+    "gatsby-plugin-netlify": "1.0.16",
     "gatsby-plugin-nprogress": "1.0.11",
     "gatsby-plugin-react-helmet": "2.0.4",
     "gatsby-plugin-styled-components": "2.0.5",
@@ -35,9 +35,9 @@
     "babel-eslint": "8.2.1",
     "eslint": "4.16.0",
     "eslint-config-react-app": "2.1.0",
-    "eslint-plugin-flowtype": "2.41.1",
+    "eslint-plugin-flowtype": "2.42.0",
     "eslint-plugin-import": "2.8.0",
     "eslint-plugin-jsx-a11y": "6.0.3",
-    "eslint-plugin-react": "7.5.1"
+    "eslint-plugin-react": "7.6.0"
   }
 }
